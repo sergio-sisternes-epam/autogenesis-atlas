@@ -24,3 +24,4 @@
 - 2026-08-26: discussion branch — protostar Atlas discipline and optional atlas type.
 - 2026-08-26: implemented 2026-08-26-residuals-vs-protostar (autogenesis 0.3.13).
 - 2026-08-26: memory hygiene for 2026-08-26-residuals-vs-protostar (KVA + missing pages).
+- 2026-08-30: Flattened OKF root to git clone root. Nested `atlas/` removed so mount is not `…/atlas/atlas`. Compile with `--root .` (clone root).
