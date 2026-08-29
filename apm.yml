@@ -1,0 +1,9 @@
+name: autogenesis-atlas
+version: 0.3.12
+description: Dedicated Atlas store for the autogenesis skill. OKF root is atlas/.
+author: Sergio Sisternes
+license: Apache-2.0
+dependencies:
+  apm:
+    - sergio-sisternes-epam/okf
+    - sergio-sisternes-epam/atlas

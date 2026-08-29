@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.2",
+  "atlas_id": "autogenesis-skill-memory",
+  "title": "Autogenesis skill process memory",
+  "description": "Subject Atlas for the autogenesis skill. All Autogenesis-authored content is scoped under autogenesis/ (experiences, decisions, work, plans).",
+  "structure": {
+    "free_layout": true,
+    "staging_dir": "staging",
+    "require_index_in_folders": true,
+    "reserved_names": [
+      "index.md",
+      "log.md",
+      "staging",
+      "autogenesis"
+    ],
+    "recommended_folders": [
+      "autogenesis",
+      "templates",
+      "staging"
+    ]
+  },
+  "autogenesis_space": {
+    "description": "Everything Autogenesis creates in a target Atlas lives under this prefix so subject-native memory can coexist at the Atlas root.",
+    "root": "autogenesis",
+    "plans_dir": "autogenesis/plans",
+    "plan_path_convention": "autogenesis/plans/<work_id>.md",
+    "experiences_dir": "autogenesis/experiences",
+    "decisions_dir": "autogenesis/decisions",
+    "work_dir": "autogenesis/work",
+    "initiate_includes": [
+      "autogenesis/",
+      "autogenesis/plans/",
+      "autogenesis/plans/index.md",
+      "autogenesis/experiences/",
+      "autogenesis/experiences/index.md",
+      "autogenesis/decisions/",
+      "autogenesis/decisions/index.md",
+      "autogenesis/work/",
+      "autogenesis/work/index.md",
+      "templates/plan.md",
+      "templates/experience.md",
+      "templates/decision.md",
+      "templates/work.md"
+    ]
+  },
+  "compile": {
+    "hard_fail": true,
+    "allow_inline_ignores": true,
+    "min_body_chars": 40,
+    "core_checks": [
+      "okf_compliance",
+      "frontmatter",
+      "internal_links",
+      "not_just_links",
+      "schema_present",
+      "no_answerable_in_staging",
+      "index_md_present"
+    ],
+    "simplicity_budget": {
+      "max_required_frontmatter_keys_per_type": 8,
+      "max_required_sections_per_type": 6
+    }
+  },
+  "templates": {
+    "directory": "templates/",
+    "by_type": {
+      "experience": {
+        "file": "templates/experience.md",
+        "frontmatter": {
+          "required": [
+            "type",
+            "title",
+            "created",
+            "work_id"
+          ],
+          "recommended": [
+            "description",
+            "tags",
+            "status"
+          ]
+        },
+        "sections": {
+          "required": [
+            "Context",
+            "What happened",
+            "Outcome"
+          ],
+          "recommended": [
+            "Related",
+            "Follow-ups"
+          ]
+        }
+      },
+      "decision": {
+        "file": "templates/decision.md",
+        "frontmatter": {
+          "required": [
+            "type",
+            "title",
+            "created"
+          ],
+          "recommended": [
+            "status",
+            "work_id"
+          ]
+        },
+        "sections": {
+          "required": [
+            "Decision",
+            "Rationale"
+          ],
+          "recommended": [
+            "Alternatives considered",
+            "Consequences"
+          ]
+        }
+      },
+      "work": {
+        "file": "templates/work.md",
+        "frontmatter": {
+          "required": [
+            "type",
+            "title",
+            "created",
+            "work_id"
+          ],
+          "recommended": [
+            "status",
+            "description"
+          ]
+        },
+        "sections": {
+          "required": [
+            "Scope",
+            "Status",
+            "Outcomes"
+          ],
+          "recommended": [
+            "Related"
+          ]
+        }
+      },
+      "plan": {
+        "file": "templates/plan.md",
+        "frontmatter": {
+          "required": [
+            "type",
+            "title",
+            "created",
+            "work_id"
+          ],
+          "recommended": [
+            "status",
+            "change_class",
+            "description",
+            "subject"
+          ]
+        },
+        "sections": {
+          "required": [
+            "Intent + scope",
+            "Genesis Artifacts",
+            "Acceptance"
+          ],
+          "recommended": [
+            "Pins",
+            "Non-goals",
+            "Accepted risks",
+            "Stop for approval"
+          ]
+        }
+      }
+    }
+  },
+  "query": {
+    "search_engine": "grep"
+  },
+  "types": {
+    "recommended": [
+      "experience",
+      "decision",
+      "work",
+      "plan",
+      "lesson",
+      "recipe"
+    ]
+  }
+}
