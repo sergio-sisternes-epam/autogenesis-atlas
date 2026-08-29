@@ -1,6 +1,6 @@
 name: autogenesis-atlas
 version: 0.3.12
-description: Dedicated Atlas store for the autogenesis skill. OKF root is atlas/.
+description: Dedicated Atlas store package for the autogenesis skill (not a skill). OKF root is atlas/. Mount this repo and pass --root …/atlas.
 author: Sergio Sisternes
 license: Apache-2.0
 dependencies:
