@@ -2,7 +2,9 @@
 
 Scoped under **autogenesis/work/**.
 
+- [2026-09-05-atlas-storage-semantics](2026-09-05-atlas-storage-semantics.md) — **done locally**
 - [2026-08-26-residuals-vs-protostar](2026-08-26-residuals-vs-protostar.md) — **done**
+- [2026-08-26-discuss-skill-formalization](2026-08-26-discuss-skill-formalization.md) — **done**
 - [2026-08-26-medium-atlas-first-creative-loop](2026-08-26-medium-atlas-first-creative-loop.md) — **done** (subject medium; plan lives in medium Atlas)
 - [2026-08-26-gamma-atlas-first-creative-loop](2026-08-26-gamma-atlas-first-creative-loop.md) — **done** (subject gamma; plan lives in gamma Atlas)
 
@@ -27,3 +29,4 @@ Scoped under **autogenesis/work/**.
 - [2026-08-26-discuss-sprout-leaves](2026-08-26-discuss-sprout-leaves.md) — **designed** (subject discuss)
 - [2026-08-26-autogenesis-discuss-activation](2026-08-26-autogenesis-discuss-activation.md) — **done** (path discuss, v0.3.11)
 - [2026-08-26-discuss-from-active-design](2026-08-26-discuss-from-active-design.md) — **done** (v0.3.12)
+- [atlas-migrate-cli-improve-v1](atlas-migrate-cli-improve-v1.md) — **designed**

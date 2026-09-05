@@ -9,6 +9,8 @@ tags: [discuss-graph, residuals, open, counter-5, lineage, mode-boundary]
 origin: internal
 sensitivity: internal
 relates_to:
+  - path: autogenesis/work/2026-08-26-discuss-skill-formalization.md
+    kind: implements
   - path: autogenesis/experiences/2026-08-26-discuss-counter-5-response-mode-lacks-persistence.md
     kind: follows
   - path: autogenesis/experiences/2026-08-26-discuss-low-residuals-captured.md

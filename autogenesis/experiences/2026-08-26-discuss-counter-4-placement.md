@@ -9,6 +9,8 @@ tags: [discuss-graph, counter-4, placement, cross-atlas, ontology, scope-creep]
 origin: internal
 sensitivity: internal
 relates_to:
+  - path: autogenesis/work/2026-08-26-discuss-skill-formalization.md
+    kind: implements
   - path: autogenesis/experiences/2026-08-26-discuss-skill-formalization-hub.md
     kind: follows
   - path: autogenesis/experiences/2026-08-26-discuss-remaining-counters-open.md

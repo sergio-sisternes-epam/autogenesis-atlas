@@ -1,10 +1,14 @@
 ---
 type: work
 title: Specify-only behavioural contract
+created: 2026-08-25
 work_id: 2026-08-25-specify-only-behavioural-contract
 status: done
 plan_path: autogenesis/plans/2026-08-25-specify-only-behavioural-contract.md
 origin: internal
+relates_to:
+  - path: autogenesis/plans/2026-08-25-specify-only-behavioural-contract.md
+    kind: related
 ---
 
 # Work: 2026-08-25-specify-only-behavioural-contract

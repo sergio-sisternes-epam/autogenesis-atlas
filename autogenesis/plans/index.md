@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Migrate Autogenesis to current Atlas storage semantics](2026-09-05-atlas-storage-semantics.md) — **approved** / implemented locally
 - [2026-08-26-residuals-vs-protostar](2026-08-26-residuals-vs-protostar.md) — **done**
 
 - [Design plan: Improve Atlas migrate CLI and skill guidance](atlas-migrate-cli-improve-v1.md) — **designed**

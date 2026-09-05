@@ -1,6 +1,7 @@
 ---
 type: plan
 title: Make agent-spec specify the sole producer of behavioural contracts
+created: 2026-08-25
 work_id: 2026-08-25-specify-only-behavioural-contract
 status: approved
 change_class: new-surface

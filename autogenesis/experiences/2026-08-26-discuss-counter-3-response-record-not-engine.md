@@ -9,6 +9,8 @@ tags: [discuss-graph, counter-3, record, navigation, amortisation, human-ai-conv
 origin: user
 sensitivity: internal
 relates_to:
+  - path: autogenesis/work/2026-08-26-discuss-skill-formalization.md
+    kind: implements
   - path: autogenesis/experiences/2026-08-26-discuss-counter-3-insight.md
     kind: follows
   - path: autogenesis/experiences/2026-08-26-discuss-skill-formalization-hub.md

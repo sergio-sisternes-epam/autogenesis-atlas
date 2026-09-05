@@ -25,3 +25,5 @@
 - 2026-08-26: implemented 2026-08-26-residuals-vs-protostar (autogenesis 0.3.13).
 - 2026-08-26: memory hygiene for 2026-08-26-residuals-vs-protostar (KVA + missing pages).
 - 2026-08-30: Flattened OKF root to git clone root. Nested `atlas/` removed so mount is not `…/atlas/atlas`. Compile with `--root .` (clone root).
+- 2026-09-05: Restored canonical work hubs and work-cluster edges for historical discussion and migration-plan pages.
+- 2026-09-05: Closed work 2026-09-05-atlas-storage-semantics after relocating the store contract and reaching compile green.
