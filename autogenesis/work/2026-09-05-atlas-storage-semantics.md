@@ -12,6 +12,10 @@ relates_to:
     kind: related
   - path: autogenesis/experiences/2026-09-05-implement-atlas-storage-semantics.md
     kind: records
+  - path: autogenesis/experiences/2026-09-05-atlas-storage-migration-publication-and-review.md
+    kind: records
+  - path: autogenesis/decisions/policy-lookup-uses-owner-atlas.md
+    kind: records
 ---
 
 ## Scope
@@ -32,6 +36,10 @@ separately approval-gated.
 - v0.4.0 migration and consumer guidance are documented.
 - Current happy-path and adversarial smokes pass.
 - The canonical store compiles with no warnings.
+- Autogenesis PR #2 is review-clean; its two review findings were corrected in
+  `2ff4a72`.
+- Policy lookups now resolve the policy owner's Atlas rather than the audited
+  subject's store.
 - Formal Construct execution remains deferred because Construct is unavailable
   in this harness.
 
