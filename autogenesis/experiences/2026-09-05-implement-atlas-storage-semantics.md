@@ -53,6 +53,7 @@ Autogenesis source:
 - `references/modules/validate-skill-import-links.md`
 - `references/paths/atlas-migrate.md`
 - `references/paths/aware-runtime.md`
+- `references/paths/design.md`
 - `references/paths/discuss.md`
 - `references/paths/implement.md`
 - `references/paths/initialise.md`
