@@ -9,7 +9,7 @@ origin: derived
 sensitivity: internal
 relates_to:
   - path: autogenesis/plans/atlas-migrate-cli-improve-v1.md
-    kind: records
+    kind: implements
 ---
 
 ## Scope
