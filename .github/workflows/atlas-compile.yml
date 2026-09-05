@@ -1,0 +1,203 @@
+# Adapted from Atlas v0.8.15 references/ci/github-actions.compile.yml.
+name: Atlas store validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    env:
+      ATLAS_ROOT: .
+      ATLAS_REPO: sergio-sisternes-epam/atlas
+      ATLAS_TAG: v0.8.15
+      ATLAS_COMMIT: 4d4796ba66f3de284fbf1df33f5d24a7f5da1980
+    steps:
+      - name: Resolve candidate commit
+        id: candidate
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REPOSITORY_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          case "$GITHUB_EVENT_NAME" in
+            pull_request)
+              candidate="$PR_HEAD_SHA"
+              ;;
+            push)
+              candidate="$GITHUB_SHA"
+              ;;
+            workflow_dispatch)
+              candidate="$(
+                curl --fail --location --silent --show-error \
+                  --header "Authorization: Bearer $REPOSITORY_TOKEN" \
+                  --header "X-GitHub-Api-Version: 2022-11-28" \
+                  "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/git/ref/heads/main" |
+                  jq -er '.object.sha'
+              )"
+              ;;
+            *)
+              echo "::error::Unsupported event: $GITHUB_EVENT_NAME"
+              exit 2
+              ;;
+          esac
+          if ! [[ "$candidate" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Candidate ref did not resolve to a commit SHA"
+            exit 2
+          fi
+          echo "sha=$candidate" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout candidate store
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ steps.candidate.outputs.sha }}
+          persist-credentials: false
+
+      - name: Require dedicated store root
+        env:
+          CANDIDATE_SHA: ${{ steps.candidate.outputs.sha }}
+          ROOT: ${{ env.ATLAS_ROOT }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$CANDIDATE_SHA"
+          test -f "$ROOT/SCHEMA.json"
+          test ! -e "$ROOT/apm.yml"
+          test ! -e "$ROOT/apm.lock.yaml"
+          mapfile -t schemas < <(
+            find "$ROOT" \
+              -path "$ROOT/.git" -prune -o \
+              -path "$ROOT/.atlas" -prune -o \
+              -name SCHEMA.json -type f -print
+          )
+          if [ "${#schemas[@]}" -ne 1 ] || [ "${schemas[0]}" != "$ROOT/SCHEMA.json" ]; then
+            echo "::error::Expected exactly one SCHEMA.json at the store root"
+            printf '%s\n' "${schemas[@]}"
+            exit 2
+          fi
+
+      - name: Reject fork credential exposure
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          echo "::error::Fork pull requests cannot receive ATLAS_CLI_TOKEN; reproduce this commit on a trusted branch"
+          exit 2
+
+      - name: Set up Python
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Install exact Atlas release
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          ATLAS_TOKEN: ${{ secrets.ATLAS_CLI_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$ATLAS_TOKEN" ]; then
+            echo "::error::ATLAS_CLI_TOKEN must grant read access to the private Atlas repository"
+            exit 2
+          fi
+
+          tag_ref="$(
+            curl --fail --location --silent --show-error \
+              --header "Authorization: Bearer $ATLAS_TOKEN" \
+              --header "X-GitHub-Api-Version: 2022-11-28" \
+              "$GITHUB_API_URL/repos/$ATLAS_REPO/git/ref/tags/$ATLAS_TAG"
+          )"
+          tag_type="$(jq -er '.object.type' <<<"$tag_ref")"
+          tag_sha="$(jq -er '.object.sha' <<<"$tag_ref")"
+          if [ "$tag_type" = "tag" ]; then
+            tag_object="$(
+              curl --fail --location --silent --show-error \
+                --header "Authorization: Bearer $ATLAS_TOKEN" \
+                --header "X-GitHub-Api-Version: 2022-11-28" \
+                "$GITHUB_API_URL/repos/$ATLAS_REPO/git/tags/$tag_sha"
+            )"
+            tag_type="$(jq -er '.object.type' <<<"$tag_object")"
+            tag_sha="$(jq -er '.object.sha' <<<"$tag_object")"
+          fi
+          if [ "$tag_type" != "commit" ] || [ "$tag_sha" != "$ATLAS_COMMIT" ]; then
+            echo "::error::$ATLAS_REPO#$ATLAS_TAG does not resolve to $ATLAS_COMMIT"
+            exit 2
+          fi
+
+          cli_dir="$(mktemp -d "$RUNNER_TEMP/atlas-cli.XXXXXX")"
+          archive="$(mktemp "$RUNNER_TEMP/atlas-cli.XXXXXX")"
+          curl --fail --location --silent --show-error \
+            --header "Authorization: Bearer $ATLAS_TOKEN" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            "$GITHUB_API_URL/repos/$ATLAS_REPO/tarball/$ATLAS_COMMIT" \
+            --output "$archive"
+          tar -xzf "$archive" --strip-components=1 --directory "$cli_dir"
+          grep -Eq '^version:[[:space:]]+0\.8\.15[[:space:]]*$' "$cli_dir/apm.yml"
+          python3 -m pip install -r "$cli_dir/scripts/requirements-ci.txt"
+          test "$(python3 "$cli_dir/scripts/atlas.py" --version)" = "atlas, version 0.8.15"
+          echo "ATLAS_CLI=$cli_dir" >> "$GITHUB_ENV"
+
+      - name: Record validation metadata
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          CANDIDATE_SHA: ${{ steps.candidate.outputs.sha }}
+        run: |
+          jq -n \
+            --arg candidate_sha "$CANDIDATE_SHA" \
+            --arg event "$GITHUB_EVENT_NAME" \
+            --arg atlas_package "$ATLAS_REPO#$ATLAS_TAG" \
+            --arg atlas_commit "$ATLAS_COMMIT" \
+            '{
+              candidate_sha: $candidate_sha,
+              event: $event,
+              atlas_package: $atlas_package,
+              atlas_commit: $atlas_commit
+            }' > atlas-validation-metadata.json
+          cat atlas-validation-metadata.json
+
+      - name: Compile Atlas store
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        id: atlas
+        env:
+          ROOT: ${{ env.ATLAS_ROOT }}
+        run: |
+          set +e
+          python3 "$ATLAS_CLI/scripts/atlas.py" compile \
+            --root "$ROOT" --json > atlas-compile.json
+          status=$?
+          set -e
+          if ! python3 -m json.tool atlas-compile.json >/dev/null; then
+            echo "::error::Atlas compile did not produce valid JSON evidence"
+            cat atlas-compile.json
+            exit 2
+          fi
+          cat atlas-compile.json
+          echo "compile_exit=$status" >> "$GITHUB_OUTPUT"
+          case "$status" in
+            0)
+              ;;
+            1)
+              echo "::warning::Atlas compile completed with warnings"
+              ;;
+            2)
+              exit 2
+              ;;
+            *)
+              echo "::error::Atlas compile exited abnormally with status $status"
+              exit "$status"
+              ;;
+          esac
+
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: atlas-store-validation-${{ steps.candidate.outputs.sha }}
+          path: |
+            atlas-compile.json
+            atlas-validation-metadata.json
+          if-no-files-found: warn
