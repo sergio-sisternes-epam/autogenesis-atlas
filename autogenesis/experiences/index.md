@@ -2,6 +2,8 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Publish and review the Autogenesis Atlas storage migration](2026-09-05-atlas-storage-migration-publication-and-review.md)
+- [Implement current Atlas storage semantics](2026-09-05-implement-atlas-storage-semantics.md)
 - [Memory hygiene after implement](2026-08-26-memory-hygiene-residuals-vs-protostar.md)
 - [Skill-feedback: residuals folder](2026-08-26-skill-feedback-residuals-folder.md)
 - [Implement protostar parking](2026-08-26-implement-residuals-vs-protostar.md)

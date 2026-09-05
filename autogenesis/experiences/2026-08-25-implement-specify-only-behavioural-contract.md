@@ -1,6 +1,7 @@
 ---
 type: experience
 title: Implement sole-producer rule for behavioural contracts
+created: 2026-08-25
 work_id: 2026-08-25-specify-only-behavioural-contract
 implements: 2026-08-25-specify-only-behavioural-contract
 closes: []

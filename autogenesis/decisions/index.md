@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/decisions/**.
 
+- [Policy lookups resolve the policy owner's Atlas](policy-lookup-uses-owner-atlas.md)
 - [Future actions — adversarial construct hardening](adversarial-construct-future-actions.md)
 - [Learnings — adversarial construct v1 vs v2](adversarial-construct-learnings.md)
 - [Block discussion → implement short-circuit](block-discussion-to-implement.md)

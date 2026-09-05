@@ -1,0 +1,7 @@
+{
+  "id": "autogenesis-memory-types",
+  "written": [
+    "schema.d/autogenesis-memory-types.json",
+    "schema.d/autogenesis-memory-types.receipt.json"
+  ]
+}

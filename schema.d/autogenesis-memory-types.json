@@ -1,0 +1,9 @@
+{
+  "contribution_id": "autogenesis-memory-types",
+  "types": {
+    "unconstrained": [
+      "lesson",
+      "recipe"
+    ]
+  }
+}

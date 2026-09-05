@@ -8,6 +8,8 @@ change_class: new-surface
 subject: atlas
 description: "Moved from artifacts/autogenesis-plans/ into Autogenesis space plans/. Awaits approval before implement."
 relates_to:
+  - path: autogenesis/work/atlas-migrate-cli-improve-v1.md
+    kind: implements
   - path: autogenesis/work/autogenesis-plan-home-subject-atlas-v1.md
     kind: related
   - path: autogenesis/decisions/plan-home-is-subject-atlas.md

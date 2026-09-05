@@ -8,7 +8,9 @@ description: "Hub node for the sequential one-at-a-time discussion of think-chal
 tags: [discuss-skill, formalisation, atlas-graph, think-challenge]
 origin: internal
 sensitivity: internal
-relates_to: []
+relates_to:
+  - path: autogenesis/work/2026-08-26-discuss-skill-formalization.md
+    kind: implements
 ---
 
 ## Context

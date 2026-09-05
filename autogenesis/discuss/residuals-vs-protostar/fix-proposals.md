@@ -11,6 +11,8 @@ stage: discussion
 artifact: autogenesis/discuss/residuals-vs-protostar/fix-proposals.md
 description: "Candidate fixes. Not pinned. Not implement."
 relates_to:
+  - path: autogenesis/work/2026-08-26-residuals-vs-protostar.md
+    kind: implements
   - path: autogenesis/discuss/residuals-vs-protostar/hub.md
     kind: derived_from
   - path: autogenesis/discuss/residuals-vs-protostar/why-it-keeps-happening.md
