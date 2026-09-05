@@ -137,8 +137,8 @@ jobs:
             --output "$archive"
           tar -xzf "$archive" --strip-components=1 --directory "$cli_dir"
           grep -Eq '^version:[[:space:]]+0\.8\.15[[:space:]]*$' "$cli_dir/apm.yml"
-          test "$(python3 "$cli_dir/scripts/atlas.py" --version)" = "atlas, version 0.8.15"
           python3 -m pip install -r "$cli_dir/scripts/requirements-ci.txt"
+          test "$(python3 "$cli_dir/scripts/atlas.py" --version)" = "atlas, version 0.8.15"
           echo "ATLAS_CLI=$cli_dir" >> "$GITHUB_ENV"
 
       - name: Record validation metadata
