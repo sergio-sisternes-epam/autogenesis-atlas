@@ -36,11 +36,11 @@ printed by `atlas resolve` to `atlas compile --root` or
 ## Validate
 
 Atlas is released separately. Validate this store with
-`sergio-sisternes-epam/atlas#v0.8.15`, whose tag resolves to commit
-`4d4796ba66f3de284fbf1df33f5d24a7f5da1980`:
+`sergio-sisternes-epam/atlas#v0.9.0`, whose tag resolves to commit
+`2b6659e5440886c7abbd9ad10686fa3a0100813b`:
 
 ```text
-python3 <atlas-v0.8.15>/scripts/atlas.py compile --root . --json
+python3 <atlas-v0.9.0>/scripts/atlas.py compile --root . --json
 ```
 
 The unfocused compile validates the root schema, OKF frontmatter and links,
