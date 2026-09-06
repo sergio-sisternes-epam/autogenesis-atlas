@@ -1,4 +1,4 @@
-# Adapted from Atlas v0.8.15 references/ci/github-actions.compile.yml.
+# Adapted from Atlas v0.9.0 references/ci/github-actions.compile.yml.
 name: Atlas store validation
 
 on:
@@ -17,8 +17,8 @@ jobs:
     env:
       ATLAS_ROOT: .
       ATLAS_REPO: sergio-sisternes-epam/atlas
-      ATLAS_TAG: v0.8.15
-      ATLAS_COMMIT: 4d4796ba66f3de284fbf1df33f5d24a7f5da1980
+      ATLAS_TAG: v0.9.0
+      ATLAS_COMMIT: 2b6659e5440886c7abbd9ad10686fa3a0100813b
     steps:
       - name: Resolve candidate commit
         id: candidate
@@ -136,9 +136,9 @@ jobs:
             "$GITHUB_API_URL/repos/$ATLAS_REPO/tarball/$ATLAS_COMMIT" \
             --output "$archive"
           tar -xzf "$archive" --strip-components=1 --directory "$cli_dir"
-          grep -Eq '^version:[[:space:]]+0\.8\.15[[:space:]]*$' "$cli_dir/apm.yml"
+          grep -Eq '^version:[[:space:]]+0\.9\.0[[:space:]]*$' "$cli_dir/apm.yml"
           python3 -m pip install -r "$cli_dir/scripts/requirements-ci.txt"
-          test "$(python3 "$cli_dir/scripts/atlas.py" --version)" = "atlas, version 0.8.15"
+          test "$(python3 "$cli_dir/scripts/atlas.py" --version)" = "atlas, version 0.9.0"
           echo "ATLAS_CLI=$cli_dir" >> "$GITHUB_ENV"
 
       - name: Record validation metadata
