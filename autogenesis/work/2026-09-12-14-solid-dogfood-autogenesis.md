@@ -3,7 +3,7 @@ type: work
 title: Dogfood the SOLID lens on Autogenesis
 created: 2026-09-12
 work_id: 2026-09-12-14-solid-dogfood-autogenesis
-status: designed
+status: done
 external_ref: sergio-sisternes-epam/autogenesis#14
 description: Apply the approved skill-native SOLID lens to Autogenesis itself before the next release, with workspace-source evaluation and comparative design evidence, without absorbing the lens PR.
 relates_to:
@@ -16,6 +16,8 @@ relates_to:
   - path: autogenesis/experiences/2026-09-12-14-solid-lens-self-analysis.md
     kind: related
   - path: autogenesis/experiences/2026-09-12-14-solid-improvement-recommendations.md
+    kind: related
+  - path: autogenesis/experiences/2026-09-12-14-solid-dogfood-implementation.md
     kind: related
 ---
 
@@ -30,8 +32,10 @@ decision. Deferred items stay protostars beside the plan.
 
 ## Status
 
-Designed and persisted. Awaiting explicit approval. Do not implement on the
-SOLID-lens parent branch.
+Explicit implement approval received. First slice is implemented from workspace
+Autogenesis v0.6.0 with workspace-source fail-closed checks, three comparative
+exercises, current-suite adversarial smokes, and docs. Catalog v0.4.3 was not
+evidence. Parked protostars remain unimplemented.
 
 ## Outcomes
 
@@ -39,6 +43,7 @@ SOLID-lens parent branch.
 - [Self-analysis of Autogenesis through the lens](../experiences/2026-09-12-14-solid-lens-self-analysis.md)
 - [Ranked improvement recommendations](../experiences/2026-09-12-14-solid-improvement-recommendations.md)
 - [This design run](../experiences/2026-09-12-14-solid-dogfood-design.md)
+- [Implement experience](../experiences/2026-09-12-14-solid-dogfood-implementation.md)
 - Prerequisite lens work remains [2026-09-12-solid-skill-design-lens](2026-09-12-solid-skill-design-lens.md)
 
 ## Related

@@ -3,7 +3,7 @@ type: plan
 title: Dogfood SOLID on Autogenesis before next release
 created: 2026-09-12
 work_id: 2026-09-12-14-solid-dogfood-autogenesis
-status: designed
+status: done
 change_class: new-surface
 subject: autogenesis
 external_ref: sergio-sisternes-epam/autogenesis#14
