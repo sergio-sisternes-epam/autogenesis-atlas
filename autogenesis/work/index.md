@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/work/**.
 
+- [SOLID architecture review of Autogenesis modules](2026-09-12-solid-architecture-review.md) - **designed; awaiting approval**
 - [2026-09-12-catalog-think-integration](2026-09-12-catalog-think-integration.md) — **done**; Autogenesis 0.7.0 nest-loads catalog think@atlas
 - [Dogfood the SOLID lens on Autogenesis](2026-09-12-14-solid-dogfood-autogenesis.md) - **done locally; implement PR pending**
 - [2026-09-12-explicit-discuss-integration](2026-09-12-explicit-discuss-integration.md) — **done**

@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Re-justify Autogenesis modules with the SOLID lens](2026-09-12-solid-architecture-review.md) - **designed; awaiting approval**
 - [Replace vendored think modules with catalog think@atlas](2026-09-12-catalog-think-integration.md) — **approved**; implemented as Autogenesis v0.7.0
 - [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0
 - [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
