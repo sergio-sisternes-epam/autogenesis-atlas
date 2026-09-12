@@ -42,6 +42,7 @@ Autogenesis design is approved.
 - Finding: `autogenesis/experiences/2026-09-12-catalog-think-overlap-finding.md`
 - Predecessor: `autogenesis/work/2026-09-12-explicit-discuss-integration.md`
 - Prior decision: `autogenesis/decisions/internal-think-modules.md`
+- Subject issue: `sergio-sisternes-epam/autogenesis#17`
 
 ## Related
 
