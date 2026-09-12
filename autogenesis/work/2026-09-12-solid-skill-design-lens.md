@@ -14,6 +14,8 @@ relates_to:
     kind: follows
   - path: autogenesis/experiences/2026-09-11-s8-self-review-diagnostic.md
     kind: derived_from
+  - path: autogenesis/work/2026-09-12-14-solid-dogfood-autogenesis.md
+    kind: related
 ---
 
 # SOLID-derived skill design lens
@@ -50,3 +52,4 @@ introduced.
 
 - [Proposed design and approval boundary](../plans/2026-09-12-solid-skill-design-lens.md)
 - [Verified implementation evidence](../experiences/2026-09-12-solid-skill-design-lens-implementation.md)
+- Follow-on dogfood work (separate approval): [2026-09-12-14-solid-dogfood-autogenesis](2026-09-12-14-solid-dogfood-autogenesis.md)

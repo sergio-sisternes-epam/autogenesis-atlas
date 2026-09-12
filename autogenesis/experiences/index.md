@@ -2,6 +2,10 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [SOLID lens conversation lineage](2026-09-12-14-solid-lens-lineage.md)
+- [Designing Autogenesis SOLID dogfood work](2026-09-12-14-solid-dogfood-design.md)
+- [Ranked SOLID follow-ups for Autogenesis](2026-09-12-14-solid-improvement-recommendations.md)
+- [SOLID lens self-analysis of Autogenesis](2026-09-12-14-solid-lens-self-analysis.md)
 - [Implementing the SOLID principles for skills lens](2026-09-12-solid-skill-design-lens-implementation.md)
 - [Decoupling Autogenesis from the unavailable private evaluator](2026-09-11-evaluator-decoupling-implementation.md)
 - [Applying instruction-first guidance to derived skills](2026-09-11-instruction-first-module-implementation.md)

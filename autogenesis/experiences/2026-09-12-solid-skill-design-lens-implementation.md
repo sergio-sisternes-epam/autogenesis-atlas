@@ -17,6 +17,10 @@ relates_to:
     kind: records
   - path: autogenesis/experiences/2026-09-11-instruction-first-module-implementation.md
     kind: follows
+  - path: autogenesis/experiences/2026-09-12-14-solid-lens-lineage.md
+    kind: related
+  - path: autogenesis/work/2026-09-12-14-solid-dogfood-autogenesis.md
+    kind: related
 ---
 
 # Implementing the SOLID principles for skills lens

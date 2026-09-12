@@ -2,6 +2,12 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
+- Protostar: [skill-root-qualified loads](2026-09-12-14-skill-root-qualified-loads.md)
+- Protostar: [SOLID evidence examples](2026-09-12-14-solid-evidence-examples.md)
+- Protostar: [root prose dedupe](2026-09-12-14-root-prose-dedupe.md)
+- Protostar: [scenario-count decoupling](2026-09-12-14-scenario-count-decouple.md)
+- [SOLID principles for skills](2026-09-12-solid-skill-design-lens.md) - **approved; implemented locally**
 - [Remove Construct from the Autogenesis runtime contract](2026-09-11-remove-construct-binding.md) - **implemented locally**
 - [Instruction-first modules for derived skills](2026-09-11-instruction-first-skill-modules.md) - **approved; implementation evidence linked from work hub**
 - [S8 portable core and Autogenesis self-application](2026-09-11-s8-core-profile-self-application.md) - **historical proposal; replaced by instruction-first design**
