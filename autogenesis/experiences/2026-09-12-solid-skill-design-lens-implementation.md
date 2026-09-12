@@ -50,7 +50,7 @@ available uv-managed Python 3.12 interpreter.
 |---|---|
 | Focused `scripts.test_source_contract` | 15 tests passed |
 | Full `scripts/test_*.py` suite | 49 tests passed |
-| `solid-skill-design-adversarial-v1` shell smokes | 6 smokes passed |
+| `solid-skill-design-adversarial-v1` shell smokes | 7 smokes passed |
 | `scripts/release_readiness.py` | pass |
 | `scripts/dependency_contract.py` | pass; 4 direct dependencies and 0 anchor divergences |
 | `scripts/store_contract.py` | pass; reviewed store commit unchanged |
@@ -60,3 +60,8 @@ available uv-managed Python 3.12 interpreter.
 The consumer checks reported no deployment drift. The scenario evidence proves
 the approved structural and wording contracts, not semantic design quality;
 future real design tasks remain the behavioral evidence for the lens's value.
+
+Review follow-up tightened the hardening omission rationale, made package
+reviews fail incomplete current designs, verified resolvable Markdown links,
+and added initialise-specific scenario coverage. The full Python 3.12 suite
+remained green at 50 tests.
