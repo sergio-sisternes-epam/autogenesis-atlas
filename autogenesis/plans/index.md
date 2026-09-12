@@ -2,6 +2,9 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Thin Autogenesis root SKILL.md into a router](2026-09-12-thin-root-router.md) - **designed; awaiting approval**
+- [Invocation JSON is Autogenesis checker policy only](2026-09-12-invocation-json-checker-policy.md) - **designed; awaiting approval**
+- [Isolate later SOLID implement from Autogenesis PR 15](2026-09-12-isolate-pr15-gitlink.md) - **designed; awaiting approval**
 - [Re-justify Autogenesis modules with the SOLID lens](2026-09-12-solid-architecture-review.md) - **designed; awaiting approval**
 - [Replace vendored think modules with catalog think@atlas](2026-09-12-catalog-think-integration.md) — **approved**; implemented as Autogenesis v0.7.0
 - [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0

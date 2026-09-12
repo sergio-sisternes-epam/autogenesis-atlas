@@ -37,18 +37,13 @@ user-facing job of this work is: after approval, an implementer can fuse or
 keep each of the 20 modules using a recorded SOLID table, without adding
 structure.
 
-First implement slice after approval (not this persist):
+First implement slice after approval is **superseded** by three dedicated
+works (do not fuse `think-*`; they remain catalog `think@atlas` nest-load
+wrappers per `2026-09-12-catalog-think-integration`):
 
-1. Publish the keep/fuse map in contributor docs only as far as needed to
-   bind implementers (AGENTS/CONTRIBUTING pointers), not a new module.
-2. Fuse or inline the thin always-co-loaded support leaves that fail S8
-   applicability (starting with think-grill and think-ramble), updating the
-   registry and invocation inventory in the same change.
-3. Make root SKILL.md a thinner router by moving duplicated Atlas/approval
-   prose solely into workflow-discipline (absorbs parked protostar
-   `2026-09-12-14-root-prose-dedupe` only if still open).
-4. Keep `invocation-contract.json` as maintainer/checker policy; do not
-   present it as derived-skill runtime.
+1. `2026-09-12-thin-root-router`
+2. `2026-09-12-invocation-json-checker-policy`
+3. `2026-09-12-isolate-pr15-gitlink`
 
 Deferred: skill-root-qualified lens loads, compact good/bad examples, exact
 scenario-count decoupling, catalog-vs-workspace identity beyond #15's
@@ -79,7 +74,7 @@ workspace-source fail-closed checks.
 
 | Principle | Status | Rationale / design consequence |
 |---|---|---|
-| S | trade-off | Keep design/implement/initialise/review-package/atlas-migrate and the four validate facets. Fuse thin always-loaded leaves (`fuse-thin-support`). |
+| S | trade-off | Keep design/implement/initialise/review-package/atlas-migrate, workflow-discipline, and the four validate facets. Do not fuse think-* catalog wrappers. |
 | O | applicable | Parent-owned context stays closed. Catalog name collision is a separate identity hazard already mitigated in #15. No new extension points. |
 | L | applicable | Same skill name, two contracts (catalog vs checkout) is substitution failure. Leaves do not claim interchangeability. |
 | I | trade-off | Progressive disclosure of operations stays. Bootstrap must not require the full JSON envelope for every Run (`narrow-bootstrap`). |

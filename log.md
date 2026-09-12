@@ -43,3 +43,4 @@
 - 2026-09-12: Opened approved plan and nest-load decision for work 2026-09-12-catalog-think-integration; internal-think-modules superseded.
 - 2026-09-12: Closed work 2026-09-12-catalog-think-integration; Autogenesis 0.7.0 nest-loads catalog think@atlas from parent-routed wrappers.
 - 2026-09-12: Opened work `2026-09-12-solid-architecture-review` with keep/fuse plan and implement advice; status designed, implementation approval pending.
+- 2026-09-12: Opened works `2026-09-12-thin-root-router`, `2026-09-12-invocation-json-checker-policy`, and `2026-09-12-isolate-pr15-gitlink`; think-* wrappers remain; PR 15 isolation is explicit; status designed.

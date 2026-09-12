@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Designed thin-root, JSON-policy, and PR15 isolation](2026-09-12-solid-follow-on-designs.md)
 - [SOLID review of Autogenesis modular architecture](2026-09-12-solid-architecture-review.md)
 - [Implement advice for Autogenesis SOLID keep/fuse](2026-09-12-solid-architecture-implement-advice.md)
 - [Implemented catalog think nest-load wrappers](2026-09-12-catalog-think-integration-implemented.md) — **done**
