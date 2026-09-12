@@ -59,3 +59,9 @@ Actions secret `ATLAS_CLI_TOKEN` with read-only metadata and contents access to
 that repository. The workflow uses it only to acquire the pinned Atlas release.
 It does not pass the secret to fork pull requests; those runs fail closed and
 must be reproduced from a trusted branch before merge.
+
+## License
+
+Copyright (c) 2026 Sergio Sisternes. All rights reserved. The source is
+publicly readable but is not open source; no rights are granted except with
+prior written permission. See [LICENSE](LICENSE).
