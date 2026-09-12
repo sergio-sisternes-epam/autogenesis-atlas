@@ -2,6 +2,8 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Implemented explicit Discuss package integration](2026-09-12-explicit-discuss-integration-implemented.md) — **done**
+- [Explicit Discuss integration deferred because agent-spec is unavailable](2026-09-12-explicit-discuss-integration-agent-spec-unavailable.md) — **deferred**
 - [SOLID lens conversation lineage](2026-09-12-14-solid-lens-lineage.md)
 - [Designing Autogenesis SOLID dogfood work](2026-09-12-14-solid-dogfood-design.md)
 - [Ranked SOLID follow-ups for Autogenesis](2026-09-12-14-solid-improvement-recommendations.md)
