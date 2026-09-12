@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Catalog think overlaps Autogenesis internal think modules](2026-09-12-catalog-think-overlap-finding.md) — **done**
 - [Implementing Autogenesis SOLID dogfood](2026-09-12-14-solid-dogfood-implementation.md)
 - [Implemented explicit Discuss package integration](2026-09-12-explicit-discuss-integration-implemented.md) — **done**
 - [Explicit Discuss integration deferred because agent-spec is unavailable](2026-09-12-explicit-discuss-integration-agent-spec-unavailable.md) — **deferred**

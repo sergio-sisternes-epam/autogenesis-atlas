@@ -39,3 +39,4 @@
 - 2026-09-12: Closed work `2026-09-12-solid-skill-design-lens`; the approved shared lens, prospective guidance, structural checks, scenario smokes, and consumer validations are complete.
 - 2026-09-12: Opened work `2026-09-12-14-solid-dogfood-autogenesis` with a new-surface dogfood plan, four protostars, and lineage experiences; status designed, implementation approval pending.
 - 2026-09-12: Closed work `2026-09-12-14-solid-dogfood-autogenesis` after approved first-slice implement; workspace-source checks and comparative SOLID exercises are recorded.
+- 2026-09-12: Opened work `2026-09-12-catalog-think-integration` after a close-out finding that Autogenesis still vendors think-challenge/grill/ramble while declaring unused `think@atlas`; status designed, implementation blocked pending Autogenesis design approval.
