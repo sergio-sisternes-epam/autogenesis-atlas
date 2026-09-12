@@ -3,7 +3,7 @@ type: work
 title: Shared template path resolution hardening
 created: 2026-09-12
 work_id: 2026-09-12-9-shared-template-path-hardening
-status: draft
+status: done
 external_ref: "https://github.com/sergio-sisternes-epam/autogenesis/issues/9"
 description: Generalize regression prevention for package-shared template references after two module-relative paths were missed during the v0.5.0 migration review.
 relates_to:
@@ -13,6 +13,8 @@ relates_to:
     kind: related
   - path: autogenesis/work/2026-09-11-skill-module-invocation.md
     kind: follows
+  - path: autogenesis/experiences/2026-09-12-shared-template-path-hardening-implemented.md
+    kind: records
 ---
 
 # Shared template path resolution hardening
@@ -26,14 +28,14 @@ registry.
 
 ## Status
 
-The two concrete PR #7 defects were fixed before merge. This follow-up is
-regression hardening tracked by GitHub issue #9, not a claim that the merged
-package still contains those broken references.
+Done. The two concrete PR #7 defects remained fixed, and the follow-up added a
+repository-wide source contract for concrete module resource references.
 
 ## Outcomes
 
 - [Review experience](../experiences/2026-09-12-pr7-missed-shared-template-paths.md)
 - [Forming hardening action](2026-09-12-9-shared-template-path-hardening-protostar.md)
+- [Implementation experience](../experiences/2026-09-12-shared-template-path-hardening-implemented.md)
 
 ## Related
 

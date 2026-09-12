@@ -36,3 +36,4 @@
 - 2026-09-11: Opened work `2026-09-11-remove-construct-binding`; designed removal of the unavailable private evaluator from live Autogenesis contracts while retaining portable scenarios and history.
 - 2026-09-11: Closed work `2026-09-11-remove-construct-binding`; live Autogenesis contracts are evaluator-neutral, v4 is current, all local checks pass, and historical evidence is preserved.
 - 2026-09-11: Closed local implementation work `2026-09-11-instruction-first-skill-modules`; private evaluation is optional evidence rather than a runtime gate, while GitHub CI remains the release gate.
+- 2026-09-12: Closed work `2026-09-12-9-shared-template-path-hardening`; all live module resource references now have deterministic source coverage.
