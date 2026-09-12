@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/work/**.
 
+- [2026-09-12-explicit-discuss-integration](2026-09-12-explicit-discuss-integration.md) — **done**
 - [Dogfood the SOLID lens on Autogenesis](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
 - [SOLID-derived skill design lens](2026-09-12-solid-skill-design-lens.md) - **done locally; lens PR still open**
 - [Remove Construct from the Autogenesis runtime contract](2026-09-11-remove-construct-binding.md) - **done locally**

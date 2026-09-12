@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0
 - [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
 - Protostar: [skill-root-qualified loads](2026-09-12-14-skill-root-qualified-loads.md)
 - Protostar: [SOLID evidence examples](2026-09-12-14-solid-evidence-examples.md)
