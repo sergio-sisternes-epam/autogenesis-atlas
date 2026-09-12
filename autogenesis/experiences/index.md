@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Implementing the SOLID principles for skills lens](2026-09-12-solid-skill-design-lens-implementation.md)
 - [Decoupling Autogenesis from the unavailable private evaluator](2026-09-11-evaluator-decoupling-implementation.md)
 - [Applying instruction-first guidance to derived skills](2026-09-11-instruction-first-module-implementation.md)
 - [Challenging Python tooling complexity in the module migration](2026-09-11-python-tooling-overengineering-challenge.md)

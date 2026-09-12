@@ -3,7 +3,7 @@ type: work
 title: SOLID-derived skill design lens
 created: 2026-09-12
 work_id: 2026-09-12-solid-skill-design-lens
-status: designed
+status: done
 description: A pinned new-surface design now defines a skill-native SOLID lens grounded in cohesion, information hiding, change locality, and explicit applicability without forcing modularization or runtime machinery.
 relates_to:
   - path: autogenesis/plans/2026-09-12-solid-skill-design-lens.md
@@ -38,12 +38,15 @@ foundation.
 
 ## Status
 
-The design choices are pinned and the formal plan is persisted. Implementation
-is awaiting explicit approval. The design keeps Genesis read-only, adds one
-shared Autogenesis reference, applies it prospectively through existing
-authoring/review surfaces, and introduces no runtime module or semantic
-validator.
+The user explicitly approved implementation on 2026-09-12. The approved
+handoff is complete on a dedicated Atlas branch derived from reviewed gitlink
+commit `73b97db21b8155a7a95ed10259524110d070facc`. One shared authority now
+applies prospectively through existing authoring and review surfaces, with
+structural tests, additive scenario evidence and both consumer profiles green.
+Genesis remains read-only and no runtime module or semantic validator was
+introduced.
 
 ## Outcomes
 
 - [Proposed design and approval boundary](../plans/2026-09-12-solid-skill-design-lens.md)
+- [Verified implementation evidence](../experiences/2026-09-12-solid-skill-design-lens-implementation.md)

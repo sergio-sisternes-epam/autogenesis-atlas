@@ -3,7 +3,7 @@ type: plan
 title: SOLID principles for skills
 created: 2026-09-12
 work_id: 2026-09-12-solid-skill-design-lens
-status: proposed
+status: approved
 change_class: new-surface
 subject: autogenesis
 description: Add an Autogenesis-owned, skill-native SOLID design lens after Genesis without forcing modularization, speculative abstractions, or semantic validators.
@@ -18,7 +18,7 @@ relates_to:
 
 # SOLID principles for skills
 
-**Proposed for approval. No implementation is authorized by this plan.**
+**Approved for implementation on 2026-09-12.**
 
 ## Genesis Artifacts
 
@@ -456,7 +456,6 @@ the scenario and test assertions are INTERNAL maintainer evidence.
 
 ## Approval gate
 
-Design is complete and persisted, but implementation is blocked until the user
-explicitly approves this plan. Approval authorizes only the implementation
-handoff above; it does not authorize release, tag, merge, global consumer
-updates, or changes to Genesis.
+The user explicitly approved this design on 2026-09-12. Approval authorizes
+only the implementation handoff above; it does not authorize release, tag,
+merge, global consumer updates, or changes to Genesis.
