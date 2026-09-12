@@ -23,6 +23,8 @@ relates_to:
     kind: related
   - path: autogenesis/plans/2026-09-12-14-solid-dogfood-autogenesis.md
     kind: related
+  - path: autogenesis/experiences/2026-09-12-14-solid-dogfood-implementation.md
+    kind: related
 ---
 
 # SOLID lens conversation lineage
@@ -39,10 +41,11 @@ work and protostars plus durable memories of that whole thread.
 The lens work_id `2026-09-12-solid-skill-design-lens` remains the
 implementation of the shared authority. Pull request 11 is that change set.
 This newer work_id does not absorb it. Analysis and ranking were advisory.
-Dogfood design is a separate plan that stops for approval.
+Dogfood design is a separate plan. Explicit implement approval was later
+given; first-slice implementation is recorded beside this spine.
 
 ## Outcome
 
 Readers can hop from this spine to the lens plan, lens implementation
-experience, self-analysis, recommendation ranking, dogfood plan, and work hub
-without treating any later page as approval to implement.
+experience, self-analysis, recommendation ranking, dogfood plan, implement
+experience, and work hub without absorbing the lens change set.

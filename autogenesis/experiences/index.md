@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Implementing Autogenesis SOLID dogfood](2026-09-12-14-solid-dogfood-implementation.md)
 - [SOLID lens conversation lineage](2026-09-12-14-solid-lens-lineage.md)
 - [Designing Autogenesis SOLID dogfood work](2026-09-12-14-solid-dogfood-design.md)
 - [Ranked SOLID follow-ups for Autogenesis](2026-09-12-14-solid-improvement-recommendations.md)

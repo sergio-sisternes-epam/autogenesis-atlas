@@ -38,3 +38,4 @@
 - 2026-09-11: Closed local implementation work `2026-09-11-instruction-first-skill-modules`; private evaluation is optional evidence rather than a runtime gate, while GitHub CI remains the release gate.
 - 2026-09-12: Closed work `2026-09-12-solid-skill-design-lens`; the approved shared lens, prospective guidance, structural checks, scenario smokes, and consumer validations are complete.
 - 2026-09-12: Opened work `2026-09-12-14-solid-dogfood-autogenesis` with a new-surface dogfood plan, four protostars, and lineage experiences; status designed, implementation approval pending.
+- 2026-09-12: Closed work `2026-09-12-14-solid-dogfood-autogenesis` after approved first-slice implement; workspace-source checks and comparative SOLID exercises are recorded.
