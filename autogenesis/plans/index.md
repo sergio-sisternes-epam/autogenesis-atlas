@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
+- [Replace vendored think modules with catalog think@atlas](2026-09-12-catalog-think-integration.md) — **approved**; implemented as Autogenesis v0.7.0
 - [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0
 - [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
 - Protostar: [skill-root-qualified loads](2026-09-12-14-skill-root-qualified-loads.md)

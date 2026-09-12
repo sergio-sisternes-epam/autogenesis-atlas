@@ -20,7 +20,8 @@ Scoped under **autogenesis/decisions/**.
 - [Exit claim = action](exit-claim-equals-action.md)
 - [Hard memory gate (Atlas)](hard-memory-gate.md)
 - [autogenesis implementation status (2026-08-21)](implementation-status-2026-08-21.md)
-- [Internal think modules](internal-think-modules.md)
+- [Catalog think nest-load](catalog-think-nest-load.md)
+- [Internal think modules](internal-think-modules.md) — **superseded**
 - [Lineage, G6/G8 and remember/ingest now use Atlas paths](lineage-and-remember-via-atlas.md)
 - [Lineage corpus](lineage-corpus.md)
 - [Memories must link back to changed files](memory-link-changed-files.md)
