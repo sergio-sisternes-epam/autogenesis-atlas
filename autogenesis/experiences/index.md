@@ -2,6 +2,21 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [SOLID lens conversation lineage](2026-09-12-14-solid-lens-lineage.md)
+- [Designing Autogenesis SOLID dogfood work](2026-09-12-14-solid-dogfood-design.md)
+- [Ranked SOLID follow-ups for Autogenesis](2026-09-12-14-solid-improvement-recommendations.md)
+- [SOLID lens self-analysis of Autogenesis](2026-09-12-14-solid-lens-self-analysis.md)
+- [Implementing the SOLID principles for skills lens](2026-09-12-solid-skill-design-lens-implementation.md)
+- [Decoupling Autogenesis from the unavailable private evaluator](2026-09-11-evaluator-decoupling-implementation.md)
+- [Applying instruction-first guidance to derived skills](2026-09-11-instruction-first-module-implementation.md)
+- [Challenging Python tooling complexity in the module migration](2026-09-11-python-tooling-overengineering-challenge.md)
+- [Module migration release-candidate panel review](2026-09-11-module-migration-release-review.md)
+- [S8 self-review diagnostic and candidate golden standard](2026-09-11-s8-self-review-diagnostic.md)
+- [Implementing the Parent-routed Skill Module draft pattern](2026-09-11-skill-module-pattern-implementation.md)
+- [Shaping the Skill Module pattern under Genesis](2026-09-11-skill-module-pattern-design.md)
+- [Module invocation implementation approval and feasibility](2026-09-11-module-invocation-implementation.md)
+- [One-question-at-a-time module invocation design](2026-09-11-module-invocation-design.md)
+
 - [Publish and review the Autogenesis Atlas storage migration](2026-09-05-atlas-storage-migration-publication-and-review.md)
 - [Implement current Atlas storage semantics](2026-09-05-implement-atlas-storage-semantics.md)
 - [Memory hygiene after implement](2026-08-26-memory-hygiene-residuals-vs-protostar.md)

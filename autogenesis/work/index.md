@@ -2,6 +2,15 @@
 
 Scoped under **autogenesis/work/**.
 
+- [Dogfood the SOLID lens on Autogenesis](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
+- [SOLID-derived skill design lens](2026-09-12-solid-skill-design-lens.md) - **done locally; lens PR still open**
+- [Remove Construct from the Autogenesis runtime contract](2026-09-11-remove-construct-binding.md) - **done locally**
+- [Instruction-first modules for derived skills](2026-09-11-instruction-first-skill-modules.md) - **done locally; final CI remains**
+- [S8 core and Autogenesis profile self-application](2026-09-11-s8-core-profile-self-application.md) - **deferred; replaced by instruction-first design**
+- [Parent-routed Skill Module pattern](2026-09-11-parent-routed-skill-module-pattern.md) - **implemented locally; final CI and live acceptance pending**
+- [Skill modules and invocation discipline](2026-09-11-skill-module-invocation.md) - **implemented locally; final CI and live behaviour acceptance pending**
+- [Approved execution plan and model delegation](2026-09-11-skill-module-invocation-execution.md)
+
 - [2026-09-05-atlas-storage-semantics](2026-09-05-atlas-storage-semantics.md) — **done locally**
 - [2026-08-26-residuals-vs-protostar](2026-08-26-residuals-vs-protostar.md) — **done**
 - [2026-08-26-discuss-skill-formalization](2026-08-26-discuss-skill-formalization.md) — **done**

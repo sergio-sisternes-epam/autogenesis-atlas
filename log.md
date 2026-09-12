@@ -27,3 +27,14 @@
 - 2026-08-30: Flattened OKF root to git clone root. Nested `atlas/` removed so mount is not `…/atlas/atlas`. Compile with `--root .` (clone root).
 - 2026-09-05: Restored canonical work hubs and work-cluster edges for historical discussion and migration-plan pages.
 - 2026-09-05: Closed work 2026-09-05-atlas-storage-semantics after relocating the store contract and reaching compile green.
+- 2026-09-11: Added autogenesis/discussions/ for the skill-module evolution conversation and its unresolved activation boundary.
+- 2026-09-11: Opened work 2026-09-11-skill-module-invocation and persisted its formal new-surface design after sequential discussion decisions; status designed, implementation approval pending.
+- 2026-09-11: Opened work 2026-09-11-parent-routed-skill-module-pattern; designed an Autogenesis-hosted structural draft under Genesis, awaiting implementation approval.
+- 2026-09-11: Opened work `2026-09-11-s8-core-profile-self-application` after core/profile direction approval; formal design persisted, implementation approval pending.
+- 2026-09-11: Opened work `2026-09-11-instruction-first-skill-modules` after the user's derived-skill scope clarification; replacement design persisted, earlier machinery-heavy proposal deferred.
+- 2026-09-11: Work `2026-09-11-instruction-first-skill-modules` received explicit implementation approval; guidance is present locally and acceptance is deferred with linked evidence, not declared complete.
+- 2026-09-11: Opened work `2026-09-11-remove-construct-binding`; designed removal of the unavailable private evaluator from live Autogenesis contracts while retaining portable scenarios and history.
+- 2026-09-11: Closed work `2026-09-11-remove-construct-binding`; live Autogenesis contracts are evaluator-neutral, v4 is current, all local checks pass, and historical evidence is preserved.
+- 2026-09-11: Closed local implementation work `2026-09-11-instruction-first-skill-modules`; private evaluation is optional evidence rather than a runtime gate, while GitHub CI remains the release gate.
+- 2026-09-12: Closed work `2026-09-12-solid-skill-design-lens`; the approved shared lens, prospective guidance, structural checks, scenario smokes, and consumer validations are complete.
+- 2026-09-12: Opened work `2026-09-12-14-solid-dogfood-autogenesis` with a new-surface dogfood plan, four protostars, and lineage experiences; status designed, implementation approval pending.
