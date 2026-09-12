@@ -2,7 +2,7 @@
 type: decision
 title: "Internal think modules"
 created: 2026-08-23
-status: accepted
+status: superseded
 work_id: autogenesis-okf-wiki-to-atlas-migration-v1
 description: "Migrated knowledge: Internal think modules"
 relates_to:
@@ -13,6 +13,8 @@ relates_to:
   - path: autogenesis/decisions/discipline-enter-change-exit.md
     kind: related
   - path: autogenesis/decisions/corpus-experiences.md
+    kind: related
+  - path: autogenesis/decisions/catalog-think-nest-load.md
     kind: related
 ---
 
@@ -42,3 +44,7 @@ Migrated from okf-wiki knowledge page `internal-think-modules` during work `auto
 ## Consequences
 
 See relates_to; discipline paths use Atlas only.
+
+Superseded on 2026-09-12 by
+`autogenesis/decisions/catalog-think-nest-load.md`. Autogenesis no longer
+owns forked think procedure; wrappers nest-load catalog `think@atlas`.

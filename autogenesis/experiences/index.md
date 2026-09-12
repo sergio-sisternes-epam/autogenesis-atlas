@@ -2,6 +2,7 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Implemented catalog think nest-load wrappers](2026-09-12-catalog-think-integration-implemented.md) — **done**
 - [Catalog think overlaps Autogenesis internal think modules](2026-09-12-catalog-think-overlap-finding.md) — **done**
 - [Implementing Autogenesis SOLID dogfood](2026-09-12-14-solid-dogfood-implementation.md)
 - [Implemented explicit Discuss package integration](2026-09-12-explicit-discuss-integration-implemented.md) — **done**

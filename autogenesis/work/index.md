@@ -2,7 +2,7 @@
 
 Scoped under **autogenesis/work/**.
 
-- [2026-09-12-catalog-think-integration](2026-09-12-catalog-think-integration.md) — **designed**; implementation blocked pending Autogenesis design approval
+- [2026-09-12-catalog-think-integration](2026-09-12-catalog-think-integration.md) — **done**; Autogenesis 0.7.0 nest-loads catalog think@atlas
 - [Dogfood the SOLID lens on Autogenesis](2026-09-12-14-solid-dogfood-autogenesis.md) - **done locally; implement PR pending**
 - [2026-09-12-explicit-discuss-integration](2026-09-12-explicit-discuss-integration.md) — **done**
 - [SOLID-derived skill design lens](2026-09-12-solid-skill-design-lens.md) - **done locally; lens PR still open**
