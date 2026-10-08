@@ -11,7 +11,7 @@ closes: []
 scenario_ref: references/scenarios/waza-evaluation-adversarial-v1.yaml
 evaluation_evidence: autogenesis/experiences/2026-10-08-waza-evaluation-implementation.md
 external_ref: https://github.com/sergio-sisternes-epam/autogenesis/pull/25
-eval_suite_ref: "evals/autogenesis/ @ 7d3ffc8985a159cf959bf09b88f49354565b5681 (suite_version 1)"
+eval_suite_ref: "evals/autogenesis/ @ f43df15731009ea418f43e8c985eb4425234ef27 (suite_version 1)"
 behavioural_status: authored-not-run
 description: "Replaced the agent-spec/Gherkin behavioural-contract gate with upstream Waza eval suites that Autogenesis designs, authors and checks with model-free Waza commands but never runs (plan revision 3). Done on PR 25 (0.9.0, not merged, no release); the Autogenesis dogfood suite evals/autogenesis/ is authored-not-run and handed to Master of Trials."
 origin: derived

@@ -117,6 +117,7 @@ and no suite task was run against an agent.
 
 ## Changed files
 
+- `.waza.yaml` (added 2026-10-08 02:16 BST approval: SKILL.md token budget 4000)
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `AGENTS.md`
 - `CHANGELOG.md`
@@ -250,6 +251,18 @@ and no suite task was run against an agent.
 - `references/waza-authoring.md`
 - `scripts/test_release_readiness.py`
 - `scripts/test_source_contract.py`
+
+## Token budget follow-up
+
+Sergio approved at 02:16 BST raising the Waza token budget for the root
+SKILL.md. A root `.waza.yaml` (commit 71b7a1c) sets `SKILL.md` to 4000 and
+restates Waza's other built-in limits, because `tokens.limits` replaces them.
+Re-run offline at head f43df15 (Waza 0.38.9, network off,
+`WAZA_NO_UPDATE_CHECK=1`): `waza check` exit 0, 3762 of 4000 tokens, not
+exceeded (status warning, above the unchanged 500-token warning threshold);
+compliance still Medium and `ready: false` (no trigger/anti-trigger labels,
+unknown frontmatter fields, dead links with the network off). V2 and V3
+unchanged: reference 7/7 passed, negative 7/7 failed. CI green on f43df15.
 
 ## Outcome
 
