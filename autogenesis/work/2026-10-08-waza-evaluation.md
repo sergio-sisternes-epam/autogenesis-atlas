@@ -13,7 +13,7 @@ evaluation_evidence: null
 external_ref: null
 eval_suite_ref: null
 behavioural_status: null
-description: "Design (revision 2) for replacing the agent-spec/Gherkin behavioural-contract gate with Waza eval suites that Autogenesis designs and authors but never runs. Running belongs to the subject owner; supplied results may be cited with provenance. Status designed; Phase 1 awaits Sergio's approval."
+description: "Design (revision 3) for replacing the agent-spec/Gherkin behavioural-contract gate with Waza eval suites that Autogenesis designs, authors and validates with model-free Waza checks but never runs. Running belongs to the subject owner; supplied results may be cited with provenance. Status designed; Phase 1 awaits Sergio's approval."
 origin: derived
 sensitivity: internal
 tags: [work, lineage, evaluation, waza]
@@ -40,14 +40,18 @@ migration phases. Design only; no package change.
 
 designed (2026-10-08), revision 2. Sergio's feedback at 01:06 BST narrowed
 the scope: Autogenesis designs and authors Waza evals but does not run them,
-and depends only on upstream Waza. Plan stopped for approval. Approval would
+and depends only on upstream Waza. Revision 3 (01:10 BST): Sergio allowed
+model-free validity checks (`waza check`, `waza spec verify` without
+`--semantic`, update check off, Waza 0.38.9); deterministic graders are also
+checked against authored fixtures with `waza grade`. Intended runner: a
+separate on-demand evaluator bot. Plan stopped for approval. Approval would
 authorise Phase 1 only (contract cutover, no model calls).
 
 ## Outcomes
 
-- Plan: `autogenesis/plans/2026-10-08-waza-evaluation.md`, revision 2
+- Plan: `autogenesis/plans/2026-10-08-waza-evaluation.md`, revision 3
   (change-class new-surface, 11 pins, revision-1 counters re-assessed plus
-  new counters N1-N5, 9 open questions).
+  new counters N1-N8, open question 1 closed, 8 remaining).
 - Revision 1 (author and run) was superseded the same night by revision 2
   (author only).
 - Inventory finding: there are no `.feature` files; agent-spec is undeclared
@@ -66,3 +70,4 @@ no wrapper dependency.
 
 - designed: 2026-10-08 (revision 1)
 - designed: 2026-10-08 (revision 2, author-only scope)
+- designed: 2026-10-08 (revision 3, model-free validity checks allowed)
