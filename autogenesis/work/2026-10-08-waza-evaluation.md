@@ -11,9 +11,9 @@ closes: []
 scenario_ref: references/scenarios/waza-evaluation-adversarial-v1.yaml
 evaluation_evidence: autogenesis/experiences/2026-10-08-waza-evaluation-implementation.md
 external_ref: https://github.com/sergio-sisternes-epam/autogenesis/pull/25
-eval_suite_ref: "evals/autogenesis/ @ f43df15731009ea418f43e8c985eb4425234ef27 (suite_version 1)"
-behavioural_status: authored-not-run
-description: "Replaced the agent-spec/Gherkin behavioural-contract gate with upstream Waza eval suites that Autogenesis designs, authors and checks with model-free Waza commands but never runs (plan revision 3). Done on PR 25 (0.9.0, not merged, no release); the Autogenesis dogfood suite evals/autogenesis/ is authored-not-run and handed to Master of Trials."
+eval_suite_ref: ".apm/evals/autogenesis/ @ 8f076d75ba093bad711ec601fefcc891c8c6f582 (suite_version 2)"
+behavioural_status: authored-not-validly-run
+description: "Replaced the agent-spec/Gherkin behavioural-contract gate with upstream Waza eval suites that Autogenesis designs, authors and checks with model-free Waza commands but never runs (plan revision 3). Done on PR 25 (0.9.0, not merged, no release). The dogfood suite now lives at .apm/evals/autogenesis/ (suite_version 2, not shipped); the one supplied run (f43df15) is invalid evidence and a re-run is handed to Master of Trials."
 origin: derived
 sensitivity: internal
 tags: [work, lineage, evaluation, waza]
@@ -40,6 +40,8 @@ migration phases. Design only; no package change.
 
 ## Status
 
+done, follow-up (2026-10-08 07:10 BST): the supplied run of suite_version 1 at f43df15 is invalid evidence (suite contamination through the Waza working directory and the shipped `evals/`, no `python3` in the image). Fixes A-E on PR 25 at 8f076d7: suite moved to `.apm/evals/autogenesis/` (suite_version 2), CI consumer check that the installed skill carries no suite, run layout, `config.skill_directories`, change-class heading support, `skill_invocation` F1 documented, `python3` requirement. Model-free validity re-run green. See the implement experience.
+
 done (2026-10-08): Phase 1 and Phase 2 implemented on PR 25 (head 7d3ffc8, CI green, not merged, no release). Model-free validity: reference 7/7 passed, negative 7/7 failed; plan-has-genesis-artifacts left to the runner. Not run against an agent.
 
 implementing (2026-10-08 01:25 BST): Sergio approved Phase 1 and Phase 2.
@@ -64,8 +66,7 @@ authorise Phase 1 only (contract cutover, no model calls).
 - Inventory finding: there are no `.feature` files; agent-spec is undeclared
   and unavailable; 86 of 97 parsed current smokes assert instruction text;
   two scenario files are not valid YAML; CI never parses or runs scenarios.
-- Implement experience: (pending)
-- Evaluation evidence: (none yet)
+- Evaluation evidence: model-free validity only; the supplied run at f43df15 is invalid and backs no claim.
 
 ## Related
 

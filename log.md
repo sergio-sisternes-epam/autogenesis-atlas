@@ -44,3 +44,4 @@
 - 2026-09-12: Closed work 2026-09-12-catalog-think-integration; Autogenesis 0.7.0 nest-loads catalog think@atlas from parent-routed wrappers.
 - 2026-10-08: Opened work `2026-10-08-waza-evaluation` with a new-surface plan to replace the agent-spec/Gherkin behavioural gate with Waza task suites; status designed, Phase 1 awaits approval.
 - 2026-10-08: Closed work `2026-10-08-waza-evaluation`; Autogenesis 0.9.0 authors upstream Waza suites (model-free checks only) and carries its own dogfood suite, on PR 25 (not merged, no release).
+- 2026-10-08: Follow-up on work `2026-10-08-waza-evaluation`: supplied dogfood run at f43df15 judged invalid (contamination, no python3); suite moved to .apm/evals/autogenesis/ (suite_version 2, not shipped), fixes A-E on PR 25 at 8f076d7.
