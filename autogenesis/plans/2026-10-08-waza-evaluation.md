@@ -64,6 +64,17 @@ stated in this plan.
   separate on-demand evaluator bot. Pins 4 and 7, acceptance, phases,
   evidence block, adversarial draft and challenge were updated; question 1
   is closed.
+- **Revision note** (2026-10-08, 07:33 BST, on Sergio's instruction after
+  the first supplied run of the dogfood suite): the suite location
+  convention changes for subjects that ship as an APM package with a root
+  `SKILL.md`. Their suite goes at `<subject>/.apm/evals/<skill>/`, with
+  `paths.evals: .apm/evals` in the subject's `.waza.yaml`, because APM
+  cannot exclude folders: it copies every package path except `.apm/` into
+  the installed skill, so a suite under `evals/` ships to every consumer.
+  Other subjects keep `<subject>/evals/<skill>/`. The Autogenesis dogfood
+  suite moved to `.apm/evals/autogenesis/` (suite_version 2, PR 25 at
+  8f076d7). Where this plan says `evals/<skill>/` or `evals/autogenesis/`,
+  read it with this note. Approval scope is unchanged.
 
 ## Intent + scope
 
