@@ -2,7 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
-- [Evolve Autogenesis evaluation from the Gherkin gate to Waza skill evals](2026-10-08-waza-evaluation.md) — **designed; awaiting approval** (Phase 1 only)
+- [Evolve Autogenesis evaluation from the Gherkin gate to authored Waza eval suites](2026-10-08-waza-evaluation.md) — **designed (revision 2: author, never run); awaiting approval** (Phase 1 only)
 - [Replace vendored think modules with catalog think@atlas](2026-09-12-catalog-think-integration.md) — **approved**; implemented as Autogenesis v0.7.0
 - [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0
 - [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**

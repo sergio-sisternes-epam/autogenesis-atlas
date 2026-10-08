@@ -1,6 +1,6 @@
 ---
 type: work
-title: "Evolve Autogenesis evaluation from the Gherkin gate to Waza skill evals"
+title: "Evolve Autogenesis evaluation from the Gherkin gate to authored Waza eval suites"
 created: "2026-10-08"
 updated: "2026-10-08"
 work_id: "2026-10-08-waza-evaluation"
@@ -11,7 +11,9 @@ closes: []
 scenario_ref: null
 evaluation_evidence: null
 external_ref: null
-description: "Design for replacing the agent-spec/Gherkin behavioural-contract gate with Waza task suites in the subject repo, 3 trials with pass^3 on gate tasks, cited at implement Exit. Status designed; Phase 1 awaits Sergio's approval."
+eval_suite_ref: null
+behavioural_status: null
+description: "Design (revision 2) for replacing the agent-spec/Gherkin behavioural-contract gate with Waza eval suites that Autogenesis designs and authors but never runs. Running belongs to the subject owner; supplied results may be cited with provenance. Status designed; Phase 1 awaits Sergio's approval."
 origin: derived
 sensitivity: internal
 tags: [work, lineage, evaluation, waza]
@@ -36,14 +38,18 @@ migration phases. Design only; no package change.
 
 ## Status
 
-designed (2026-10-08). Plan stopped for approval. Approval would authorise
-Phase 1 only (contract cutover with no model calls). Phase 2 (supervised
-pilot) is also blocked on a Copilot-only eval token decision.
+designed (2026-10-08), revision 2. Sergio's feedback at 01:06 BST narrowed
+the scope: Autogenesis designs and authors Waza evals but does not run them,
+and depends only on upstream Waza. Plan stopped for approval. Approval would
+authorise Phase 1 only (contract cutover, no model calls).
 
 ## Outcomes
 
-- Plan: `autogenesis/plans/2026-10-08-waza-evaluation.md` (change-class
-  new-surface, 11 pins, 9 challenge counters, 13 open questions).
+- Plan: `autogenesis/plans/2026-10-08-waza-evaluation.md`, revision 2
+  (change-class new-surface, 11 pins, revision-1 counters re-assessed plus
+  new counters N1-N5, 9 open questions).
+- Revision 1 (author and run) was superseded the same night by revision 2
+  (author only).
 - Inventory finding: there are no `.feature` files; agent-spec is undeclared
   and unavailable; 86 of 97 parsed current smokes assert instruction text;
   two scenario files are not valid YAML; CI never parses or runs scenarios.
@@ -52,10 +58,11 @@ pilot) is also blocked on a Copilot-only eval token decision.
 
 ## Related
 
-Follows the 2026-09-11 removal of the private Construct evaluator, whose
-reasoning drives the stance that upstream Waza is an external tool and the
-private waza-apm wrapper stays optional.
+Follows the 2026-09-11 removal of the private Construct evaluator. The same
+reasoning backs the stance that upstream Waza is only the format target, with
+no wrapper dependency.
 
 ## Status history
 
-- designed: 2026-10-08
+- designed: 2026-10-08 (revision 1)
+- designed: 2026-10-08 (revision 2, author-only scope)
