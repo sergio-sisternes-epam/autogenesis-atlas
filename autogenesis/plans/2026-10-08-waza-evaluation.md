@@ -5,7 +5,8 @@ created: "2026-10-08"
 updated: "2026-10-08"
 revision: 3
 work_id: "2026-10-08-waza-evaluation"
-status: designed
+status: approved
+approval_ref: "Sergio 2026-10-08 01:25 BST: Go on Phase 1 and Phase 2: implement eval authoring in Autogenesis (v0.9.0), then write its own suite and hand it to Master of Trials."
 change_class: new-surface
 subject: autogenesis
 plan_path: autogenesis/plans/2026-10-08-waza-evaluation.md
@@ -29,8 +30,11 @@ relates_to:
 
 # Evolve Autogenesis evaluation from the Gherkin gate to authored Waza eval suites
 
-**Revision 3. Designed. Stopped for approval.** Nothing in the Autogenesis
-package has changed. Approving this plan authorises **Phase 1 only**.
+**Revision 3. Approved** by Sergio at 01:25 BST on 2026-10-08 for **Phase 1
+and Phase 2** ("Go on Phase 1 and Phase 2: implement eval authoring in
+Autogenesis (v0.9.0), then write its own suite and hand it to Master of
+Trials"). Open questions not answered by that approval keep the defaults
+stated in this plan.
 
 ## Revision history
 

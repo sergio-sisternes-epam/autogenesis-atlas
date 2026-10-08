@@ -43,3 +43,4 @@
 - 2026-09-12: Opened approved plan and nest-load decision for work 2026-09-12-catalog-think-integration; internal-think-modules superseded.
 - 2026-09-12: Closed work 2026-09-12-catalog-think-integration; Autogenesis 0.7.0 nest-loads catalog think@atlas from parent-routed wrappers.
 - 2026-10-08: Opened work `2026-10-08-waza-evaluation` with a new-surface plan to replace the agent-spec/Gherkin behavioural gate with Waza task suites; status designed, Phase 1 awaits approval.
+- 2026-10-08: Closed work `2026-10-08-waza-evaluation`; Autogenesis 0.9.0 authors upstream Waza suites (model-free checks only) and carries its own dogfood suite, on PR 25 (not merged, no release).
