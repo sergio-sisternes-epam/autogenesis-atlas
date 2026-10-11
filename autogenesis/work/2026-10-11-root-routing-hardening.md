@@ -34,6 +34,7 @@ must not move to approved, implementing, or done in the design Run.
 
 - Plan: `autogenesis/plans/2026-10-11-root-routing-hardening.md`
 - Design experience: `autogenesis/experiences/2026-10-11-root-routing-hardening-design.md`
+- Review corrections are in that plan. Status remains designed.
 - No product files changed. No scenario files materialised.
 
 ## Related

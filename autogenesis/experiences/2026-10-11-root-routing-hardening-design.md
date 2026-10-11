@@ -48,11 +48,21 @@ asking, and leave the legacy gitlink on migrate. The plan holds full
 successor scenario drafts and optional additive Waza task drafts. It stops
 for approval.
 
+A later review of the same designed plan required three corrections, still
+without implementation. Workflow-discipline step 6 is narrowed to the gitlink
+migrate rule, so a plain directory or a user-named path is not a block once
+resolution has succeeded. Successor smoke drafts search for plain backticks,
+not backslash-backtick, and a design-time dry-run of those commands is
+recorded in the plan. The just-discuss gate draft uses a zero-change
+workspace allowlist, because the reused fixture already contains the plan and
+work directories. Status remains designed.
+
 ## Outcome
 
-Plan and work node are persisted at status designed. No skill, scenario,
-eval, or changelog file was edited. Implementation is blocked until explicit
-approval of `autogenesis/plans/2026-10-11-root-routing-hardening.md`.
+Plan and work node are persisted at status designed. Review corrections are
+in the same plan. No skill, scenario, eval, or changelog file was edited.
+Implementation is blocked until explicit approval of
+`autogenesis/plans/2026-10-11-root-routing-hardening.md`.
 
 ## Related
 

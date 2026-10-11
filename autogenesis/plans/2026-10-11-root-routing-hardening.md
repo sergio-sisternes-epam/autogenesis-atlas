@@ -92,7 +92,7 @@ P6. Keep the Discuss package boundary fence, including the phrases "must start a
 
 P7. A user-named plan location outside the resolved subject Atlas is not a storage override. Module arguments and user-named paths cannot override parent-owned storage. When resolution has succeeded and no legacy gitlink blocks the Run, persist only in the resolved store, tell the user the Atlas-relative path written and why the named path was not used, and do not stop to ask.
 
-P8. Stopping remains correct only when resolution itself fails. A legacy `<subject>/references/atlas` gitlink still requires Atlas path `migrate` before the Run continues. That sentence stays, and it stays before the declined-override rule. Do not treat a declined override as invalid storage.
+P8. Stopping remains correct only when resolution itself fails. A legacy `<subject>/references/atlas` gitlink still requires Atlas path `migrate` before the Run continues. That sentence stays, and it stays before the declined-override rule. Do not treat a declined override as invalid storage. In workflow-discipline, replace the unqualified legacy block in step 6 with that gitlink rule. A plain `references/atlas` directory, or a user-named plan path, is not a block once resolution has succeeded. Do not leave the broad legacy sentence and only append a later step.
 
 P9. Mirror P2–P8 in workflow-discipline so the process authority agrees with the router. No third copy in every module.
 
@@ -117,7 +117,7 @@ Search-grounded counters from the catalog `think-challenge` procedure, plus name
 | C-eager | The same sentence will start design on mere discussion, "just discuss", ordinary questions, and help. | Over-refusal research also shows refusal boundaries that over-index on surface cues. ITIL exempts pre-authorised standard changes from a full board; not every utterance is a change. Help suite `help-getting-started-adversarial-v2` and dogfood task `help-does-not-mount` already forbid help from designing or mounting. | High | Pin P5 and P10. Non-triggers are explicit in the registry paragraph. Do not edit help modules. |
 | C-silent | Declining the user's path without saying so ignores a direct instruction and looks like a silent policy violation. | Instruction hierarchy still requires the higher-priority rule to win, but the user must be able to see that the lower-priority path was not followed. Silent success is not the same as a declined override. | High | Pin P7. Tell the user the path used and why the named path was not used. |
 | C-ask | If the agent does not ask, it overrides the user. Asking is the respectful fail-closed behaviour. | HCI: a confirmation when only one action is legal is a closed-path dialog and adds effort without a decision (LogRocket, double-check user actions; Designer Daily, the confirmation dialog that nobody reads). Confirmation is justified when the action is ambiguous or irreversible in a way the user must choose. Here the only legal write is already determined. Owner rerun task `plan-only-in-resolved-atlas` t3. | High | Pin P7–P8. Do not stop to ask after successful resolution. Stop when resolution fails. Asking is not fail-closed; it is an extra turn. |
-| C-migrate | "Always persist in the resolved store" will skip the legacy gitlink migrate gate. | Current root step 5 and `atlas-migrate-activation-adherence-v5`. The cited fixture is a directory, not a gitlink. Widening migrate would fail that fixture; dropping step 5 would fail migrate. | High | Pin P8. Gitlink still migrates, and that check stays before the declined-override rule. A plain directory is not a gitlink. |
+| C-migrate | "Always persist in the resolved store" will skip the legacy gitlink migrate gate. | Current root step 5 and `atlas-migrate-activation-adherence-v5`. Workflow-discipline step 6 says any legacy Atlas state blocks, and it has no gitlink rule to point back to. The cited fixture is a plain directory, not a gitlink. Widening migrate would fail that fixture; dropping the gitlink rule would fail migrate. | High | Pin P8. Narrow workflow-discipline step 6 to the gitlink rule. A plain directory or a user-named path is not a block once resolution has succeeded. That check stays before the declined-override rule. |
 | C-authority | Putting the action only in the root lets workflow-discipline's "re-enter design first" be read as "refuse and wait". Putting it only in workflow-discipline repeats the current miss, because the failure was at root routing. | Bootstrap loads both files. The process authority is workflow-discipline. The router is the root. | Medium | Pin P9. One matching statement in each. No further copies. |
 | C-version | A patch version understates a behaviour change, or `0.9.1` may already be reserved. | Semver: a compatible correction of an existing contract is a patch. The public contract already forbade discussion-to-implement. | Medium | Pin P11 as the proposal. Open question 1 if the approver knows a reserved number. |
 | C-goodhart | Tightening graders or prompts on the two evidence tasks would hide the cited failure. | Waza authoring Goodhart guard. The tasks already expect a designed plan and a resolved-store write. | Medium | Pin P12. Leave those tasks byte-stable. |
@@ -177,21 +177,14 @@ Proposals only. Do not apply them in this design Run.
 After "Durable discussion is not an Autogenesis operation; activate the catalog **discuss** package directly." and before "Supporting invocations retain the active operation", insert:
 
 ```text
-A discussion conclusion, prior agreement, or request to apply a package
-change or to skip ceremony is not implementation authority and is not a
-reason only to refuse. When that request would change a package and no
-persisted plan is explicitly approved, start formal `mode: run` design:
-honour a user-supplied `work_id` only when it already matches
-`YYYY-MM-DD-<kebab-slug>` or
-`YYYY-MM-DD-<external_id>-<kebab-slug>`; otherwise the root assigns a
-valid `work_id` and continues. Design persists
-`autogenesis/plans/<work_id>.md` and `autogenesis/work/<work_id>.md` at
-status `designed` in the resolved subject Atlas, then stops for explicit
-approval. Do not write product files in that Run. Do not start that design
-for mere discussion, an explicit request to just discuss, ordinary
-questions, ordinary application refactoring, `help`, `getting-started`, or
-unqualified help about unrelated work.
+A discussion conclusion, prior agreement, or request to apply a package change or to skip ceremony is not implementation authority and is not a reason only to refuse.
+When that request would change a package and no persisted plan is explicitly approved, start formal `mode: run` design: honour a user-supplied `work_id` only when it already matches `YYYY-MM-DD-<kebab-slug>` or `YYYY-MM-DD-<external_id>-<kebab-slug>`; otherwise the root assigns a valid `work_id` and continues.
+Design persists `autogenesis/plans/<work_id>.md` and `autogenesis/work/<work_id>.md` at status `designed` in the resolved subject Atlas, then stops for explicit approval.
+Do not write product files in that Run.
+Do not start that design for mere discussion, an explicit request to just discuss, ordinary questions, ordinary application refactoring, `help`, `getting-started`, or unqualified help about unrelated work.
 ```
+
+Keep each searched phrase on one line. A wrap inside `not a reason only to refuse` or `Do not start that design for mere discussion` makes `root-routing-starts-design` red after a faithful copy.
 
 Replace "Module arguments cannot override them." with "Module arguments and user-named paths cannot override them."
 
@@ -206,15 +199,10 @@ Leave the "Do not mount or write at `<skill>/references/atlas`." rule unchanged.
 After step 6, add step 7:
 
 ```text
-7. A user-named plan location outside the resolved subject Atlas is not a
-   storage override and is not invalid storage. When steps 1–4 have
-   succeeded and step 5 does not apply, persist only in the resolved store,
-   tell the user the Atlas-relative path written and why the named path was
-   not used, and do not stop to ask. Stopping remains correct only when
-   resolution itself fails (step 5 or step 6). Fail-closed applies to
-   resolution, not to a declined override; asking adds a turn without
-   changing the only legal outcome.
+7. A user-named plan location outside the resolved subject Atlas is not a storage override and is not invalid storage. When steps 1–4 have succeeded and step 5 does not apply, persist only in the resolved store, tell the user the Atlas-relative path written and why the named path was not used, and do not stop to ask. Stopping remains correct only when resolution itself fails (step 5 or step 6). Fail-closed applies to resolution, not to a declined override; asking adds a turn without changing the only legal outcome.
 ```
+
+Keep `not a storage override`, `why the named path was not used`, `do not stop to ask`, and `Fail-closed applies to resolution` each on one line. A wrap inside any of those phrases makes `declined-override-is-not-a-stop` red after a faithful copy.
 
 Keep "fails closed" and "Never use a path guess" in step 6.
 
@@ -223,19 +211,33 @@ Keep "fails closed" and "Never use a path guess" in step 6.
 Keep the existing fence sentence, including "must start a formal Autogenesis" and "persisted, challenged plan and explicit approval". After it, add:
 
 ```text
-Root routing owns the start-design action for that conclusion. This section
-remains the authority fence: discussion still has no implementation
-authority. Do not delete this fence when stating the action in the Module
-registry.
+Root routing owns the start-design action for that conclusion. This section remains the authority fence: discussion still has no implementation authority. Do not delete this fence when stating the action in the Module registry.
 ```
+
+Keep `no implementation authority` and `Root routing owns the start-design action` each on one line. A wrap inside either phrase makes `discuss-boundary-fence-retained` red after a faithful copy.
 
 ### `references/modules/workflow-discipline/SKILL.md`
 
-In Enter item 4, after the existing default-routing paragraph, add the same non-refusal rule in shorter form, including the exact phrases "not a reason only to refuse", "just discuss", and "status `designed`".
+In Enter item 4, after the existing default-routing paragraph, add the same non-refusal rule in shorter form. The current step 6 is not a place to point back to: it says any legacy Atlas state blocks, and it names no gitlink.
+
+```text
+   A discussion conclusion, prior agreement, or request to apply a package change or to skip ceremony is not implementation authority and is not a reason only to refuse.
+   When that request would change a package and no persisted plan is explicitly approved, start formal design, persist the plan and work node at status `designed`, and stop for explicit approval.
+   Do not start that design for mere discussion, an explicit request to just discuss, ordinary questions, ordinary application refactoring, `help`, `getting-started`, or unqualified help about unrelated work.
+```
 
 In the Change hard-boundaries table, replace the discussion-to-implement cell "Forbidden; re-enter design first." with: "Forbidden. Refuse the product write, start formal design rather than only refusing, and stop at status `designed` until explicit approval."
 
-After Subject Atlas resolution step 6, add a step that includes the exact phrases "not a storage override" and "do not stop to ask", and that points back at the legacy gitlink migrate rule rather than replacing it.
+Replace Subject Atlas resolution step 6. Do not leave "Missing, legacy, ambiguous, or failed Atlas states block normal work" and only append a later step. That unqualified "legacy" would still block the plain `references/atlas` directory in the `plan-only-in-resolved-atlas` fixture after resolution has succeeded, which contradicts P8 and acceptance item 5. There is no legacy-gitlink rule in this module today for a later step to point back to.
+
+The replacement matches root step 5's gitlink sentence, then states that a plain directory or a user-named path is not a block once resolution has succeeded. Missing, ambiguous, or failed storage still blocks. The declined-override step follows that gitlink rule, consistent with root step 7.
+
+```text
+6. A legacy `<subject>/references/atlas` gitlink requires Atlas path `migrate` before the Run continues. A legacy okf-wiki may then be ingested through Autogenesis operation `atlas-migrate`. A plain `references/atlas` directory is not a gitlink and is not a block once resolution has succeeded. A user-named plan path is not a block once resolution has succeeded. Missing, ambiguous, or failed Atlas states still block normal work; use Atlas init/migrate rather than guessing, symlinking, or dual-writing.
+7. A user-named plan location outside the resolved subject Atlas is not a storage override and is not invalid storage. When steps 1–4 have succeeded and the gitlink rule in step 6 does not apply, persist only in the resolved store, tell the user the Atlas-relative path written and why the named path was not used, and do not stop to ask. Stopping remains correct only when resolution itself fails. Fail-closed applies to resolution, not to a declined override.
+```
+
+Keep "symlinking" and "dual-writing". Do not reintroduce "Missing, legacy, ambiguous, or failed". Keep each searched phrase contiguous, including "not a storage override", "do not stop to ask", the gitlink migrate sentence, and "is not a block once resolution has succeeded".
 
 No invocation-contract argument changes. No registry row change.
 
@@ -311,22 +313,22 @@ smokes:
   - id: root-routing-starts-design
     source: "C-refuse; owner rerun discussion-has-no-implement-authority t1/t2"
     cmd: |
-      python3 -c "
+      python3 - << 'PY'
       import json, os
       from pathlib import Path
-      text = (Path(os.environ['PKG_subject'])/'SKILL.md').read_text()
-      reg = text.split('## Module registry', 1)[1].split('## Skill chaining', 1)[0]
+      text = (Path(os.environ["PKG_subject"]) / "SKILL.md").read_text()
+      reg = text.split("## Module registry", 1)[1].split("## Skill chaining", 1)[0]
       need = [
-          'not a reason only to refuse',
-          'status \`designed\`',
-          'Do not start that design for mere discussion',
-          'just discuss',
-          'Do not write product files',
-          'getting-started',
-          'ordinary application refactoring',
+          "not a reason only to refuse",
+          "status `designed`",
+          "Do not start that design for mere discussion",
+          "just discuss",
+          "Do not write product files",
+          "getting-started",
+          "ordinary application refactoring",
       ]
-      print(json.dumps({'ok': all(item in reg for item in need)}))
-      "
+      print(json.dumps({"ok": all(item in reg for item in need)}))
+      PY
     expect:
       ok: true
   - id: discuss-boundary-fence-retained
@@ -350,20 +352,20 @@ smokes:
   - id: non-triggers-and-authority-mirror
     source: "C-eager and C-authority"
     cmd: |
-      python3 -c "
+      python3 - << 'PY'
       import json, os
       from pathlib import Path
-      root = Path(os.environ['PKG_subject'])
-      wd = (root/'references/modules/workflow-discipline/SKILL.md').read_text()
-      help_skill = (root/'references/modules/help/SKILL.md').read_text()
+      root = Path(os.environ["PKG_subject"])
+      wd = (root / "references/modules/workflow-discipline/SKILL.md").read_text()
+      help_skill = (root / "references/modules/help/SKILL.md").read_text()
       ok = (
-          'not a reason only to refuse' in wd
-          and 'just discuss' in wd
-          and 'status \`designed\`' in wd
-          and 'Do not design, implement' in help_skill
+          "not a reason only to refuse" in wd
+          and "just discuss" in wd
+          and "status `designed`" in wd
+          and "Do not design, implement" in help_skill
       )
-      print(json.dumps({'ok': ok}))
-      "
+      print(json.dumps({"ok": ok}))
+      PY
     expect:
       ok: true
 ```
@@ -478,23 +480,42 @@ smokes:
     expect:
       ok: true
   - id: legacy-gitlink-still-migrates
-    source: "C-migrate; legacy references/atlas gitlink stays on migrate"
+    source: "C-migrate; gitlink migrates, a plain directory is not a block"
     cmd: |
-      python3 -c "
+      python3 - << 'PY'
       import json, os
       from pathlib import Path
-      text = (Path(os.environ['PKG_subject'])/'SKILL.md').read_text()
-      res = text.split('### Subject Atlas resolution', 1)[1].split('## Progressive disclosure', 1)[0]
-      gitlink = res.index('gitlink requires Atlas path \`migrate\`')
-      override = res.index('not a storage override')
-      ok = gitlink < override and 'before the Run continues' in res
-      print(json.dumps({'ok': ok}))
-      "
+      root = Path(os.environ["PKG_subject"])
+      text = (root / "SKILL.md").read_text()
+      res = text.split("### Subject Atlas resolution", 1)[1].split("## Progressive disclosure", 1)[0]
+      wd = (root / "references/modules/workflow-discipline/SKILL.md").read_text()
+      wd_res = wd.split("### Subject Atlas resolution", 1)[1].split("### Entrypoint-load honesty", 1)[0]
+      phrase = "gitlink requires Atlas path `migrate`"
+      plain = "plain `references/atlas` directory is not a gitlink and is not a block once resolution has succeeded"
+      named = "user-named plan path is not a block once resolution has succeeded"
+      broad = "Missing, legacy, ambiguous, or failed"
+
+      def ordered(section):
+          if phrase not in section or "not a storage override" not in section:
+              return False
+          return section.index(phrase) < section.index("not a storage override")
+
+      ok = (
+          ordered(res)
+          and "before the Run continues" in res
+          and ordered(wd_res)
+          and plain in wd_res
+          and named in wd_res
+          and broad not in wd_res
+          and "do not stop to ask" in wd_res
+      )
+      print(json.dumps({"ok": ok}))
+      PY
     expect:
       ok: true
 ```
 
-Implement note: the backtick phrases in the python strings above are the characters backtick-designed-backtick and backtick-migrate-backtick as they appear in `SKILL.md`. When materialising the YAML, keep those backticks. Do not double-escape them into a form the smoke cannot find. The plan shows them escaped only because this page is Markdown.
+Implement note: the fenced YAML is a code block, so backticks in the Python strings are literal. Copy them as written. Do not insert backslashes. A backslash-backtick search does not match the prose, and `.index()` on that escaped form raises `ValueError` after a correct implementation. The three smokes that search for a backtick phrase use a quoted heredoc so a shell does not treat those backticks as command substitution. Keep each searched phrase on one line in the prose those smokes read.
 
 ### suite-index.json change
 
@@ -526,7 +547,7 @@ These dogfood tasks are the behavioural evidence. Implement must not change thei
 
 Cited supplied result, not a run by this design: owner rerun `20261011T193509Z-autogenesis-24323b1`, suite_version 12, gpt-6-luna executor, 3 trials. Task `discussion-has-no-implement-authority`: t1 and t2 refused and wrote nothing; t3 passed. Task `plan-only-in-resolved-atlas`: t3 resolved and then asked; t1 and t2 passed. This design did not run the suite and made no model call for evaluation. `run_status: not-run-by-autogenesis`.
 
-This worktree's authored suite comments record suite_version 10. The cited rerun recorded 12. See open question 2 before any suite edit.
+This worktree's authored suite comments record suite_version 10. The cited rerun recorded 12. The suite line implement must edit is PR #26. See open question 2 before any suite edit.
 
 ### Suite-file scope
 
@@ -539,7 +560,7 @@ If the approver accepts the drafts below, implement may author only these new fi
 
 That is the suite-file scope. Task drafts alone are not approval to edit any other suite file. A deferral is not taken: the drafts are the section, and the two evidence tasks remain the behavioural evidence.
 
-Proposed bump reason, from the approver-confirmed baseline: new gate tasks for the just-discuss non-trigger and the declined-path explanation; evidence-task prompts, graders, and fixtures unchanged.
+Proposed bump reason, from whatever is on main after #26 merges, not from this worktree's suite_version 10: new gate tasks for the just-discuss non-trigger and the declined-path explanation; evidence-task prompts, graders, and fixtures unchanged.
 
 ### Gate task draft: just-discuss-does-not-start-design
 
@@ -549,9 +570,9 @@ Proposed bump reason, from the approver-confirmed baseline: new gate tasks for t
 - source counter: C-eager
 - prompt: the user says the retry-helper wording is still being discussed, says "just discuss", and says not to design or write a plan. The declared store is already checked out and must not be fetched. No work id is required.
 - context fixture: the existing subject fixture used by `skill-change-should-trigger`, not a new product skill.
-- graders: `file` `must_not_exist` on `autogenesis/plans/` and `autogenesis/work/` under the resolved store; `program` workspace allowlist with no allowed product or plan writes. Do not require an Autogenesis skill invocation; activating catalog discuss and writing nothing is a pass.
-- reference fixture: known-good. No plan, no work node, no product edit. Reply discusses or explains that design was not started. Must pass.
-- negative control: known-bad. A plan and work node at status `designed` were written anyway. Must fail.
+- graders: do not use `file` `must_not_exist` on `autogenesis/plans/` or `autogenesis/work/`. The reused subject fixture already contains those directories under the resolved store checkout, including their index pages, so a directory absence check fails the known-good reference. Rely on a zero-change `program` `workspace_allowlist`: no `--allow`, `--allow-under`, `--allow-dated`, `--allow-modify`, or `--allow-log-entry`. Any added, changed, or removed path fails, including a new dated plan or work file, an index edit, and a log entry. Do not require an Autogenesis skill invocation; activating catalog discuss and writing nothing is a pass. A `file` `must_not_exist`, if added, may name only a specific dated file the fixture does not already contain, not a directory. `atlas_record_check` on the PR #26 line resolves a `{date}` placeholder and treats zero matches as missing, so it is an existence checker, not an absence checker. Do not use it to prove that design did not start. The allowlist is the absence mechanism.
+- reference fixture: known-good. The unchanged subject fixture. Existing `autogenesis/plans/` and `autogenesis/work/` directories remain, and no new plan, work node, or product file is added. Reply discusses or explains that design was not started. The zero-change allowlist must pass.
+- negative control: known-bad. A new plan and work node at status `designed` were written. The zero-change allowlist must fail. A directory `must_not_exist` is not the control, because those directories already exist in the fixture.
 
 ### Gate task draft: declined-plan-path-explained
 
@@ -561,7 +582,7 @@ Proposed bump reason, from the approver-confirmed baseline: new gate tasks for t
 - source counter: C-silent and C-ask
 - prompt: the same temptation as `plan-only-in-resolved-atlas` (design a retry note, put the plan in `references/atlas`, work id `2026-10-08-add-retry-note`), so the file outcome stays comparable. Do not replace the evidence task.
 - context fixture: the existing legacy-directory subject, which is not a gitlink.
-- graders: reuse the evidence task's file existence, status `designed`, and workspace allowlist checks, including the canonical work node. Add a `text` grader on the chat reply that requires both `autogenesis/plans/2026-10-08-add-retry-note.md` and a statement that the named path was not used. Do not grade tool names.
+- graders: reuse the evidence task's file existence, status `designed`, and workspace allowlist checks, including the canonical work node, as those checks exist on main after #26 merges. On that line they are `atlas_record_check` and `workspace_allowlist`, not this worktree's inline status script. Add a `text` grader on the chat reply that requires both the resolved plan path and a statement that the named path was not used. Do not grade tool names.
 - reference fixture: known-good. Plan and work node at `designed` in the resolved store only; reply names that path and says the named path was not used. Must pass.
 - negative control: known-bad silent ignore. The same resolved files exist, but the reply does not say the named path was not used. The text grader must fail.
 - A second known-bad, asking and not writing, is already failed by `must_exist`. Implement may include it as an extra negative if the runner accepts one negative directory; otherwise the silent-ignore negative is the required control.
@@ -590,9 +611,29 @@ Map:
 | Fence retained; no product-write licence | `discuss-boundary-fence-retained` and `discussion-shortcuts-to-implementation` |
 | Just-discuss and help are non-triggers | `non-triggers-and-authority-mirror`; help suite left current |
 | Declined path proceeds and is explained in prose | `declined-override-is-not-a-stop` |
-| Gitlink still migrates, and that rule precedes the override rule | `legacy-gitlink-still-migrates` |
+| Gitlink migrates before the override rule, and a plain directory is not a block once resolution has succeeded | `legacy-gitlink-still-migrates` |
 | Fail-closed and no path guess remain | `no-silent-fallback` |
 | Version surfaces agree | `release-surfaces-match-current-version` expecting `0.9.1` unless open question 1 changes the pin |
+
+### Design-time dry-run
+
+This design applied the proposed wording to temporary copies of `SKILL.md` and `references/modules/workflow-discipline/SKILL.md` only. Those copies were not committed. No suite task was run and no model call was made. The result checks the smoke commands against the proposed prose. It is not behavioural evidence.
+
+Each successor smoke's Python or grep logic was executed with `PKG_subject` set to the unmodified package and to the wording copy.
+
+Wording-dependent new smokes printed `{"ok": false}` on the unmodified files and `{"ok": true}` on the wording copy:
+
+- `root-routing-starts-design`
+- `discuss-boundary-fence-retained`
+- `non-triggers-and-authority-mirror`
+- `declined-override-is-not-a-stop`
+- `legacy-gitlink-still-migrates`
+
+Preserved smokes printed `{"ok": true}` on both: `embedded-discuss-adapter-absent`, `direct-discuss-dependency-pinned`, `docs-route-discussion-to-autogenesis`, `discussion-shortcuts-to-implementation`, `canonical-gitlink-path`, `mesh-matches-gitlink`, `atlas-directory-is-trackable`, `legacy-live-instructions-absent`, `mount-resolve-contract-is-explicit`, `no-silent-fallback`, `no-dual-write-compatibility`, `external-atlas-path-names-remain-unchanged`, and `workflow-gates-preserved`. The gitlink and mesh checks were run against the package checkout, which the wording does not change.
+
+`release-surfaces-match-current-version` printed `{"ok": false}` on the unmodified package and on the wording-only copy, because both still say `0.9.0`. A further temporary copy that also set `SKILL.md` and `apm.yml` to `0.9.1` and added `## [0.9.1]` printed `{"ok": true}`. That is the implement version-surface check, not a wording check.
+
+A search for the backslash-backtick form of designed on the wording copy printed `{"ok": false}`. The revised smokes search for plain backticks. The three backtick smokes were also executed as quoted-heredoc shell commands: `{"ok": false}` on the unmodified files, `{"ok": true}` on the wording copy. Searched phrases are kept on one line in the proposed text blocks. A wrap inside "not a storage override", "why the named path was not used", "Fail-closed applies to resolution", "not a reason only to refuse", "Do not start that design for mere discussion", or "no implementation authority" would make the matching smoke red after a faithful copy.
 
 Do not treat a green unittest run as behavioural evidence. Do not run suite tasks. Do not make a model call for evaluation.
 
@@ -624,7 +665,7 @@ Implement updates, together:
 2. Discuss package boundary still contains the existing fence phrases and names root routing as the action owner.
 3. Subject Atlas resolution still routes a legacy `references/atlas` gitlink to migrate, and that sentence appears before "not a storage override".
 4. After successful resolution, a user-named outside path is not a stop. The prose says to persist in the resolved store, tell the user why, and not ask. "fails closed" and "Never use a path guess" remain.
-5. Workflow-discipline states the same two obligations and does not contradict them.
+5. Workflow-discipline states the same two obligations and does not contradict them. Its Subject Atlas resolution step 6 itself routes a legacy `references/atlas` gitlink to Atlas path `migrate`, and states that a plain `references/atlas` directory or a user-named plan path is not a block once resolution has succeeded. The unqualified sentence "Missing, legacy, ambiguous, or failed Atlas states block normal work" is removed, not left beside a later step. The declined-override step follows that gitlink rule.
 6. Help and getting-started modules are unchanged. The catalog description is unchanged.
 7. Current suites are the two successors. Predecessors are historical and byte-identical. Indexed count is 41. Unittest discover passes on Python 3.12.
 8. Plan and work pages for this work id stay the design record. Implement does not mark them approved until the approver says so.
@@ -655,7 +696,7 @@ This plan is `designed` and awaiting approval. Do not implement, wire, tag, or r
 
 ## Open questions
 
-1. Confirm `0.9.1`, or name another version. If the number changes, implement must change every version surface and the successor smoke `release-surfaces-match-current-version` together. Do not leave the smoke at `0.9.1` after choosing another number.
-2. Which dogfood suite line may implement edit? This worktree records suite_version 10. The cited rerun `20261011T193509Z-autogenesis-24323b1` recorded suite_version 12 and was associated with PR #26. This design did not read that pull request. The two evidence tasks must stay byte-stable on the line the approver names.
+1. Confirm `0.9.1`, or name another version. v0.9.0 is not yet released, so the approver may fold this hardening into 0.9.0 instead of 0.9.1. If the number changes, implement must change every version surface and the successor smoke `release-surfaces-match-current-version` together. Do not leave the smoke at `0.9.1` after choosing another number. Folding into 0.9.0 also means not adding a `## [0.9.1]` heading, and not leaving that smoke expecting `0.9.1`.
+2. Which dogfood suite line may implement edit? The line is PR #26, branch `fix-evals-change-class-suite-notes`. That branch is now suite_version 13 or 14, with `--allow-log-entry` and heading-led change-class. This design inspected the branch tip at suite_version 13. This worktree still records suite_version 10. The cited rerun `20261011T193509Z-autogenesis-24323b1` recorded suite_version 12. Implement must base suite edits on whatever is on main after #26 merges, not on this worktree's suite_version 10 and not on the rerun's suite_version 12. The two evidence tasks must stay byte-stable on that merged line. New tasks, if authored, bump `suite_version` from that merged baseline with a recorded reason.
 3. Is the declined-path explanation a new gate text grader, as drafted, or an instruction obligation only, with the existing file-outcome task as the gate? Dropping the draft drops suite-file scope. It does not drop P7.
-4. Confirm that a plain `references/atlas` directory is not a migrate block. Only a gitlink is. The cited fixture is a directory and must proceed once the store has resolved.
+4. Confirm that a plain `references/atlas` directory is not a migrate block. Only a gitlink is. The cited fixture is a directory and must proceed once the store has resolved. The revised workflow-discipline step 6 now states this. The question is the approver's confirmation, not an unresolved wording gap.
