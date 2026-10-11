@@ -59,10 +59,10 @@ work directories. Status remains designed.
 
 ## Outcome
 
-Plan and work node are persisted at status designed. Review corrections are
-in the same plan. No skill, scenario, eval, or changelog file was edited.
-Implementation is blocked until explicit approval of
-`autogenesis/plans/2026-10-11-root-routing-hardening.md`.
+The design Run persisted the plan and work node and stopped for approval.
+Review corrections are in the same plan. No skill, scenario, eval, or
+changelog file was edited in that Run. Explicit approval is now recorded on
+the plan and work node, not on this experience.
 
 ## Related
 
@@ -71,5 +71,4 @@ questions.
 
 ## Follow-ups
 
-Implement only after explicit approval. Do not treat this experience as
-approval.
+Explicit approval is recorded on the plan and work node (`approval_ref: chat:2026-10-11T21:52Z:sergio`). Implement only within that approved plan. Do not treat this experience as the approval.

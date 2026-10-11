@@ -3,7 +3,11 @@ type: plan
 title: "Harden root routing for discussion conclusions and forbidden plan paths"
 created: "2026-10-11"
 work_id: "2026-10-11-root-routing-hardening"
-status: designed
+status: approved
+approval_ref: "chat:2026-10-11T21:52Z:sergio"
+approved_by: "Sergio Sisternes"
+approved_at: "2026-10-11T21:52:00Z"
+approval_quote: "Approve the root-routing hardening design with the recommended answers, in 0.9.0"
 change_class: hardening
 subject: autogenesis
 plan_path: autogenesis/plans/2026-10-11-root-routing-hardening.md
@@ -29,11 +33,11 @@ relates_to:
 
 # Harden root routing for discussion conclusions and forbidden plan paths
 
-**Stops for approval. Do not implement.**
+**Approved for implement in unreleased 0.9.0. This page is the approval record, not the implementation.**
 
 `change_class: hardening`
 
-Plan frontmatter `status: designed` is the status this design prescribes while awaiting approval. It is not `approved`. The canonical work node uses the same status. Receipt disposition is `awaiting-approval`. Implement stays blocked.
+Plan frontmatter `status: approved` records explicit owner approval. The canonical work node uses the same status and the same `approval_ref`. Implement may proceed within the pins below. It must not bump the version. This approval record is not a product-file edit.
 
 ## Intent + scope
 
@@ -56,8 +60,8 @@ Stopping remains correct only when resolution itself fails: missing, ambiguous, 
 - Root `SKILL.md` Module registry paragraph, Subject Atlas resolution, and a retained fence in Discuss package boundary.
 - Matching sentences in `references/modules/workflow-discipline/SKILL.md`, because bootstrap loads that module as the process authority. A root-only sentence that the authority module does not state can be read as optional.
 - New scenario successors and the suite index, materialised only at implement. Do not edit existing scenario bodies.
-- Version surfaces for proposed `0.9.1`, and the existing scenario-count assertion that would otherwise reject two new files.
-- Optional new dogfood tasks under `.apm/evals/autogenesis`, only as drafted below. Do not edit the two evidence tasks.
+- Version surfaces stay `0.9.0`. Implement must not bump them. The CHANGELOG entry goes under the existing `[0.9.0]` section. The successor smoke expects `0.9.0`. Update the existing scenario-count assertion that would otherwise reject two new files.
+- Approved new dogfood tasks under `.apm/evals/autogenesis`, as drafted below. They bump `suite_version` from 14 to 15. Do not edit the two evidence tasks.
 
 ### Classification
 
@@ -98,9 +102,9 @@ P9. Mirror P2–P8 in workflow-discipline so the process authority agrees with t
 
 P10. Do not change the root catalog description. Trigger tasks stay stable.
 
-P11. Proposed implement version is `0.9.1`. Version surfaces move together. Do not retitle historical `0.9.0` changelog entries. Do not change the CI pin of Atlas CLI `v0.9.0`; that is Atlas, not this package.
+P11. Approved version is `0.9.0` (unreleased). Implement must not bump the version. `SKILL.md`, `apm.yml`, and the other package surfaces stay `0.9.0`. The CHANGELOG entry goes under the existing `[0.9.0]` section. Do not add a new version heading. Do not retitle historical changelog entries. Do not change the CI pin of Atlas CLI `v0.9.0`; that is Atlas, not this package. The successor smoke `release-surfaces-match-current-version` expects `0.9.0`.
 
-P12. The two named dogfood tasks are the behavioural evidence. Do not rewrite them to make the cited failure easier. New tasks, if authored, are additive and bump `suite_version` from the approver-confirmed baseline with a recorded reason.
+P12. The two named dogfood tasks are the behavioural evidence. Do not rewrite them to make the cited failure easier. Implement against dogfood suite_version 14 (PR #26 head a4038b5, branch `fix-evals-change-class-suite-notes`). Stack on that branch while #26 is unmerged. Do not base suite edits on this worktree's suite_version 10 or on the cited rerun's suite_version 12. The approved new tasks are additive and bump `suite_version` to 15, with that reason recorded. The drafted text grader in `declined-plan-path-explained` stays in scope.
 
 P13. Catalogue: B17 stays active and unchanged. `autogenesis:S8` is not selected. No new module.
 
@@ -119,7 +123,7 @@ Search-grounded counters from the catalog `think-challenge` procedure, plus name
 | C-ask | If the agent does not ask, it overrides the user. Asking is the respectful fail-closed behaviour. | HCI: a confirmation when only one action is legal is a closed-path dialog and adds effort without a decision (LogRocket, double-check user actions; Designer Daily, the confirmation dialog that nobody reads). Confirmation is justified when the action is ambiguous or irreversible in a way the user must choose. Here the only legal write is already determined. Owner rerun task `plan-only-in-resolved-atlas` t3. | High | Pin P7–P8. Do not stop to ask after successful resolution. Stop when resolution fails. Asking is not fail-closed; it is an extra turn. |
 | C-migrate | "Always persist in the resolved store" will skip the legacy gitlink migrate gate. | Current root step 5 and `atlas-migrate-activation-adherence-v5`. Workflow-discipline step 6 says any legacy Atlas state blocks, and it has no gitlink rule to point back to. The cited fixture is a plain directory, not a gitlink. Widening migrate would fail that fixture; dropping the gitlink rule would fail migrate. | High | Pin P8. Narrow workflow-discipline step 6 to the gitlink rule. A plain directory or a user-named path is not a block once resolution has succeeded. That check stays before the declined-override rule. |
 | C-authority | Putting the action only in the root lets workflow-discipline's "re-enter design first" be read as "refuse and wait". Putting it only in workflow-discipline repeats the current miss, because the failure was at root routing. | Bootstrap loads both files. The process authority is workflow-discipline. The router is the root. | Medium | Pin P9. One matching statement in each. No further copies. |
-| C-version | A patch version understates a behaviour change, or `0.9.1` may already be reserved. | Semver: a compatible correction of an existing contract is a patch. The public contract already forbade discussion-to-implement. | Medium | Pin P11 as the proposal. Open question 1 if the approver knows a reserved number. |
+| C-version | A new patch heading would open another version while 0.9.0 is still unreleased. | Semver: a compatible correction of an existing contract is a patch. The public contract already forbade discussion-to-implement. The package version is unreleased. | Medium | Pin P11. Approved in unreleased 0.9.0. Implement must not bump. Resolved question 1. |
 | C-goodhart | Tightening graders or prompts on the two evidence tasks would hide the cited failure. | Waza authoring Goodhart guard. The tasks already expect a designed plan and a resolved-store write. | Medium | Pin P12. Leave those tasks byte-stable. |
 
 ## Pinned decisions
@@ -452,7 +456,7 @@ smokes:
   - id: release-surfaces-match-current-version
     source: release identity gate
     cmd: |
-      python3 -c "import json,os,re; from pathlib import Path; p=Path(os.environ['PKG_subject']); skill=re.search(r'^version: ([0-9.]+)$',(p/'SKILL.md').read_text(),re.M).group(1); apm=re.search(r'^version: ([0-9.]+)$',(p/'apm.yml').read_text(),re.M).group(1); print(json.dumps({'ok':skill==apm=='0.9.1' and '## [0.9.1]' in (p/'CHANGELOG.md').read_text()}))"
+      python3 -c "import json,os,re; from pathlib import Path; p=Path(os.environ['PKG_subject']); skill=re.search(r'^version: ([0-9.]+)$',(p/'SKILL.md').read_text(),re.M).group(1); apm=re.search(r'^version: ([0-9.]+)$',(p/'apm.yml').read_text(),re.M).group(1); print(json.dumps({'ok':skill==apm=='0.9.0' and '## [0.9.0]' in (p/'CHANGELOG.md').read_text()}))"
     expect:
       ok: true
   - id: declined-override-is-not-a-stop
@@ -547,11 +551,11 @@ These dogfood tasks are the behavioural evidence. Implement must not change thei
 
 Cited supplied result, not a run by this design: owner rerun `20261011T193509Z-autogenesis-24323b1`, suite_version 12, gpt-6-luna executor, 3 trials. Task `discussion-has-no-implement-authority`: t1 and t2 refused and wrote nothing; t3 passed. Task `plan-only-in-resolved-atlas`: t3 resolved and then asked; t1 and t2 passed. This design did not run the suite and made no model call for evaluation. `run_status: not-run-by-autogenesis`.
 
-This worktree's authored suite comments record suite_version 10. The cited rerun recorded 12. The suite line implement must edit is PR #26. See open question 2 before any suite edit.
+This worktree's authored suite comments record suite_version 10. The cited rerun recorded 12. Implement edits the dogfood suite on PR #26 head a4038b5 (suite_version 14, branch `fix-evals-change-class-suite-notes`) and stacks on that branch while #26 is unmerged. See resolved question 2. New tasks bump `suite_version` to 15.
 
 ### Suite-file scope
 
-If the approver accepts the drafts below, implement may author only these new files under `.apm/evals/autogenesis`:
+The approver accepted the drafts below. Implement authors only these new files under `.apm/evals/autogenesis`:
 
 - `tasks/just-discuss-does-not-start-design.yaml`
 - `tasks/declined-plan-path-explained.yaml`
@@ -560,7 +564,7 @@ If the approver accepts the drafts below, implement may author only these new fi
 
 That is the suite-file scope. Task drafts alone are not approval to edit any other suite file. A deferral is not taken: the drafts are the section, and the two evidence tasks remain the behavioural evidence.
 
-Proposed bump reason, from whatever is on main after #26 merges, not from this worktree's suite_version 10: new gate tasks for the just-discuss non-trigger and the declined-path explanation; evidence-task prompts, graders, and fixtures unchanged.
+Approved bump reason, from suite_version 14 on PR #26 head a4038b5 to suite_version 15, not from this worktree's suite_version 10: new gate tasks for the just-discuss non-trigger and the declined-path explanation; evidence-task prompts, graders, and fixtures unchanged.
 
 ### Gate task draft: just-discuss-does-not-start-design
 
@@ -582,7 +586,7 @@ Proposed bump reason, from whatever is on main after #26 merges, not from this w
 - source counter: C-silent and C-ask
 - prompt: the same temptation as `plan-only-in-resolved-atlas` (design a retry note, put the plan in `references/atlas`, work id `2026-10-08-add-retry-note`), so the file outcome stays comparable. Do not replace the evidence task.
 - context fixture: the existing legacy-directory subject, which is not a gitlink.
-- graders: reuse the evidence task's file existence, status `designed`, and workspace allowlist checks, including the canonical work node, as those checks exist on main after #26 merges. On that line they are `atlas_record_check` and `workspace_allowlist`, not this worktree's inline status script. Add a `text` grader on the chat reply that requires both the resolved plan path and a statement that the named path was not used. Do not grade tool names.
+- graders: reuse the evidence task's file existence, status `designed`, and workspace allowlist checks, including the canonical work node, as those checks exist on PR #26 head a4038b5 (suite_version 14). Implement stacks on that branch while #26 is unmerged. On that line they are `atlas_record_check` and `workspace_allowlist`, not this worktree's inline status script. Add a `text` grader on the chat reply that requires both the resolved plan path and a statement that the named path was not used. That text grader stays in scope. Do not grade tool names.
 - reference fixture: known-good. Plan and work node at `designed` in the resolved store only; reply names that path and says the named path was not used. Must pass.
 - negative control: known-bad silent ignore. The same resolved files exist, but the reply does not say the named path was not used. The text grader must fail.
 - A second known-bad, asking and not writing, is already failed by `must_exist`. Implement may include it as an extra negative if the runner accepts one negative directory; otherwise the silent-ignore negative is the required control.
@@ -613,7 +617,7 @@ Map:
 | Declined path proceeds and is explained in prose | `declined-override-is-not-a-stop` |
 | Gitlink migrates before the override rule, and a plain directory is not a block once resolution has succeeded | `legacy-gitlink-still-migrates` |
 | Fail-closed and no path guess remain | `no-silent-fallback` |
-| Version surfaces agree | `release-surfaces-match-current-version` expecting `0.9.1` unless open question 1 changes the pin |
+| Version surfaces agree | `release-surfaces-match-current-version` expecting `0.9.0` |
 
 ### Design-time dry-run
 
@@ -631,7 +635,7 @@ Wording-dependent new smokes printed `{"ok": false}` on the unmodified files and
 
 Preserved smokes printed `{"ok": true}` on both: `embedded-discuss-adapter-absent`, `direct-discuss-dependency-pinned`, `docs-route-discussion-to-autogenesis`, `discussion-shortcuts-to-implementation`, `canonical-gitlink-path`, `mesh-matches-gitlink`, `atlas-directory-is-trackable`, `legacy-live-instructions-absent`, `mount-resolve-contract-is-explicit`, `no-silent-fallback`, `no-dual-write-compatibility`, `external-atlas-path-names-remain-unchanged`, and `workflow-gates-preserved`. The gitlink and mesh checks were run against the package checkout, which the wording does not change.
 
-`release-surfaces-match-current-version` printed `{"ok": false}` on the unmodified package and on the wording-only copy, because both still say `0.9.0`. A further temporary copy that also set `SKILL.md` and `apm.yml` to `0.9.1` and added `## [0.9.1]` printed `{"ok": true}`. That is the implement version-surface check, not a wording check.
+`release-surfaces-match-current-version` is the implement version-surface check. The approved smoke expects `0.9.0`: `SKILL.md` and `apm.yml` stay `0.9.0`, and `CHANGELOG.md` already contains `## [0.9.0]`. Implement must not bump those surfaces and must not add a new version heading. A design-time trial that expected a new heading is superseded by this approval. Current surfaces already say `0.9.0`, so the approved check does not require a version edit.
 
 A search for the backslash-backtick form of designed on the wording copy printed `{"ok": false}`. The revised smokes search for plain backticks. The three backtick smokes were also executed as quoted-heredoc shell commands: `{"ok": false}` on the unmodified files, `{"ok": true}` on the wording copy. Searched phrases are kept on one line in the proposed text blocks. A wrap inside "not a storage override", "why the named path was not used", "Fail-closed applies to resolution", "not a reason only to refuse", "Do not start that design for mere discussion", or "no implementation authority" would make the matching smoke red after a faithful copy.
 
@@ -641,7 +645,7 @@ If suite files are authored, implement runs only Waza validity checks V1–V3 fr
 
 ### Agent evaluations (secondary)
 
-The subject owner reruns `discussion-has-no-implement-authority` and `plan-only-in-resolved-atlas`. Those remain the behavioural evidence. The two drafted gate tasks, if authored, are also for the owner or its CI, not for Autogenesis. Quality tier is not required for this hardening; the file outcomes are gate checks.
+The subject owner reruns `discussion-has-no-implement-authority` and `plan-only-in-resolved-atlas`. Those remain the behavioural evidence. The two approved gate tasks are also for the owner or its CI, not for Autogenesis. Quality tier is not required for this hardening; the file outcomes are gate checks.
 
 ## Affected docs, registry, and changelog
 
@@ -649,11 +653,11 @@ No registry row changes. 22 modules remain. No `discuss` operation.
 
 Implement updates, together:
 
-- `SKILL.md` version `0.9.1` and the prose above.
-- `apm.yml` version `0.9.1`.
-- `CHANGELOG.md`: add `## [0.9.1]` with this work id, the two routing corrections, and the successor names. Update the Unreleased compare link. Do not rewrite the `0.9.0` section.
-- `CONTRIBUTING.md`: the v0.9.0 package sentence and the three consumer pin commands, to `v0.9.1`.
-- `.github/ISSUE_TEMPLATE/bug_report.md` example version.
+- `SKILL.md` stays at version `0.9.0`. Apply the prose above. Do not bump the version.
+- `apm.yml` stays at version `0.9.0`.
+- `CHANGELOG.md`: add this work under the existing `## [0.9.0]` section, naming this work id, the two routing corrections, and the successor names. Do not add a new version heading. Do not rewrite the other `0.9.0` entries. Do not retarget the Unreleased compare link to a new version.
+- `CONTRIBUTING.md`: leave the v0.9.0 package sentence and the three consumer pin commands at `v0.9.0`.
+- `.github/ISSUE_TEMPLATE/bug_report.md`: leave the example version at `0.9.0`.
 - Do not change `.github/workflows/ci.yml` Atlas CLI `v0.9.0`.
 - `README.md` only if a pin is found at implement time. This design found none.
 - Scenario files, suite index, and the count assertion, as above.
@@ -668,14 +672,14 @@ Implement updates, together:
 5. Workflow-discipline states the same two obligations and does not contradict them. Its Subject Atlas resolution step 6 itself routes a legacy `references/atlas` gitlink to Atlas path `migrate`, and states that a plain `references/atlas` directory or a user-named plan path is not a block once resolution has succeeded. The unqualified sentence "Missing, legacy, ambiguous, or failed Atlas states block normal work" is removed, not left beside a later step. The declined-override step follows that gitlink rule.
 6. Help and getting-started modules are unchanged. The catalog description is unchanged.
 7. Current suites are the two successors. Predecessors are historical and byte-identical. Indexed count is 41. Unittest discover passes on Python 3.12.
-8. Plan and work pages for this work id stay the design record. Implement does not mark them approved until the approver says so.
-9. The two evidence Waza tasks are byte-identical unless the approver explicitly widens scope.
-10. Version surfaces that name this package agree on `0.9.1`, or on the number the approver substitutes in every listed surface and in the successor version smoke.
+8. Plan and work pages for this work id are the approved design record (`approval_ref: chat:2026-10-11T21:52Z:sergio`). Implement may set them to implementing, then done. It must not treat them as still awaiting approval.
+9. The two evidence Waza tasks stay byte-identical. The approved new tasks are the drafts in this plan, including the `declined-plan-path-explained` text grader. They bump `suite_version` from 14 to 15 on PR #26 head a4038b5.
+10. Version surfaces that name this package stay `0.9.0`. Implement must not bump them. The CHANGELOG entry goes under the existing `[0.9.0]` section. The successor smoke `release-surfaces-match-current-version` expects `0.9.0`.
 
 ## Accepted risks
 
 - The non-trigger list can still miss a phrasing. The list is explicit rather than "when unsure, design".
-- A text grader on the explanation can be brittle. Open question 3 can drop it without dropping P7 as an instruction.
+- A text grader on the explanation can be brittle. Resolved question 3 keeps that grader in scope. Brittleness does not drop P7.
 - Two homes for the fence can drift. The successor smokes check both.
 - Agents may still only refuse until the wording ships. This plan does not claim the current package already passes the rerun.
 
@@ -692,11 +696,22 @@ Implement updates, together:
 
 ## Stop for approval
 
-This plan is `designed` and awaiting approval. Do not implement, wire, tag, or release until the approver explicitly approves this persisted plan. A card, this design receipt, or a discussion conclusion is not that approval.
+Approval has been received. See Approval below. A card, the design receipt, or a discussion conclusion is not a substitute for that recorded approval. This approval does not authorise a tag, a release, a push, or a parent-repository commit.
 
-## Open questions
+## Approval
 
-1. Confirm `0.9.1`, or name another version. v0.9.0 is not yet released, so the approver may fold this hardening into 0.9.0 instead of 0.9.1. If the number changes, implement must change every version surface and the successor smoke `release-surfaces-match-current-version` together. Do not leave the smoke at `0.9.1` after choosing another number. Folding into 0.9.0 also means not adding a `## [0.9.1]` heading, and not leaving that smoke expecting `0.9.1`.
-2. Which dogfood suite line may implement edit? The line is PR #26, branch `fix-evals-change-class-suite-notes`. That branch is now suite_version 13 or 14, with `--allow-log-entry` and heading-led change-class. This design inspected the branch tip at suite_version 13. This worktree still records suite_version 10. The cited rerun `20261011T193509Z-autogenesis-24323b1` recorded suite_version 12. Implement must base suite edits on whatever is on main after #26 merges, not on this worktree's suite_version 10 and not on the rerun's suite_version 12. The two evidence tasks must stay byte-stable on that merged line. New tasks, if authored, bump `suite_version` from that merged baseline with a recorded reason.
-3. Is the declined-path explanation a new gate text grader, as drafted, or an instruction obligation only, with the existing file-outcome task as the gate? Dropping the draft drops suite-file scope. It does not drop P7.
-4. Confirm that a plain `references/atlas` directory is not a migrate block. Only a gitlink is. The cited fixture is a directory and must proceed once the store has resolved. The revised workflow-discipline step 6 now states this. The question is the approver's confirmation, not an unresolved wording gap.
+Explicit owner approval, Sergio Sisternes, in chat, 2026-10-11 22:52 BST (2026-10-11T21:52Z).
+
+- approval_ref: `chat:2026-10-11T21:52Z:sergio`
+- approved_by: Sergio Sisternes
+- approved_at: 2026-10-11T21:52:00Z
+- verbatim: "Approve the root-routing hardening design with the recommended answers, in 0.9.0"
+
+This authorises implementation of this persisted plan only, including the four resolved answers below. It does not authorise a version bump, a tag, a release, a push, or a parent-repository commit.
+
+## Resolved questions
+
+1. Ship in unreleased 0.9.0, not a new patch version. Implement must not bump the version. `SKILL.md`, `apm.yml`, and the other surfaces stay 0.9.0. The CHANGELOG entry goes under the existing `[0.9.0]` section. Do not add a new version heading. The successor smoke `release-surfaces-match-current-version` expects 0.9.0.
+2. Implement against dogfood suite_version 14 (PR #26 head a4038b5, branch `fix-evals-change-class-suite-notes`). Implement stacks on that branch while #26 is unmerged. The new tasks bump `suite_version` to 15. Do not base suite edits on this worktree's suite_version 10 or on the cited rerun's suite_version 12. The two evidence tasks stay byte-stable on that line.
+3. The "explain why the named path was not used" behaviour gets its own grader. The drafted text grader in `declined-plan-path-explained` stays in scope.
+4. A plain `references/atlas` directory does not block. Only a git submodule (gitlink) at that path routes to Atlas migrate.

@@ -44,3 +44,4 @@
 - 2026-09-12: Opened work `2026-09-12-catalog-think-integration` after a close-out finding that Autogenesis still vendors think-challenge/grill/ramble while declaring unused `think@atlas`; status designed, implementation blocked pending Autogenesis design approval.
 - 2026-09-12: Opened approved plan and nest-load decision for work 2026-09-12-catalog-think-integration; internal-think-modules superseded.
 - 2026-09-12: Closed work 2026-09-12-catalog-think-integration; Autogenesis 0.7.0 nest-loads catalog think@atlas from parent-routed wrappers.
+- 2026-10-11: Approved work `2026-10-11-root-routing-hardening` (approval_ref `chat:2026-10-11T21:52Z:sergio`). Design may be implemented in unreleased 0.9.0; dogfood suite_version moves from 14 to 15. Implementation not started.
