@@ -2,7 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
-- [Harden root routing for discussion conclusions and forbidden plan paths](2026-10-11-root-routing-hardening.md) — **approved**; unreleased 0.9.0, implementation not started
+- [Harden root routing for discussion conclusions and forbidden plan paths](2026-10-11-root-routing-hardening.md) — **approved**; implemented in unreleased 0.9.0
 - [Replace vendored think modules with catalog think@atlas](2026-09-12-catalog-think-integration.md) — **approved**; implemented as Autogenesis v0.7.0
 - [Explicit Discuss package integration](2026-09-12-explicit-discuss-integration.md) — **done**; implemented as Autogenesis v0.6.0
 - [Dogfood SOLID on Autogenesis before next release](2026-09-12-14-solid-dogfood-autogenesis.md) - **designed; awaiting approval**
