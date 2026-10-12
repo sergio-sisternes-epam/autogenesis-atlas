@@ -46,3 +46,4 @@
 - 2026-09-12: Closed work 2026-09-12-catalog-think-integration; Autogenesis 0.7.0 nest-loads catalog think@atlas from parent-routed wrappers.
 - 2026-10-11: Approved work `2026-10-11-root-routing-hardening` (approval_ref `chat:2026-10-11T21:52Z:sergio`). Design may be implemented in unreleased 0.9.0; dogfood suite_version moves from 14 to 15. Implementation not started.
 - 2026-10-11: Closed work `2026-10-11-root-routing-hardening`. Root routing starts design for an agreed package change and declines a user-named plan path without asking. Shipped in unreleased 0.9.0. Dogfood suite_version 15 is authored, not run.
+- 2026-10-12: Opened work `2026-10-12-catalogue-description-hardening`; hardening plan persisted at status designed, implementation approval pending. Parked protostars for a plan status key and a designed-only discussion grader are not implement authority.
