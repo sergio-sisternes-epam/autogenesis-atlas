@@ -2,6 +2,9 @@
 
 Scoped under **autogenesis/experiences/**.
 
+- [Designed catalogue-description hardening for agreed skill-package changes](2026-10-12-catalogue-description-hardening-design.md) — design record; approved 2026-10-12
+- [Implemented root-routing hardening for discussion conclusions and forbidden plan paths](2026-10-11-root-routing-hardening-implement.md) — **done**; unreleased 0.9.0, suite_version 15
+- [Designed root-routing hardening for discussion conclusions and forbidden plan paths](2026-10-11-root-routing-hardening-design.md) — design record; plan approved 2026-10-11
 - [Implemented catalog think nest-load wrappers](2026-09-12-catalog-think-integration-implemented.md) — **done**
 - [Catalog think overlaps Autogenesis internal think modules](2026-09-12-catalog-think-overlap-finding.md) — **done**
 - [Implementing Autogenesis SOLID dogfood](2026-09-12-14-solid-dogfood-implementation.md)
