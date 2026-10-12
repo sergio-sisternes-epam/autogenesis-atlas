@@ -59,7 +59,7 @@ authority. The plan stops for approval.
 
 The design Run persisted the plan and work node at status designed and
 stopped for approval. No skill, scenario, eval, or changelog file was
-edited. Explicit approval is not recorded on this experience.
+edited. Approval was later recorded on the plan and work node (`chat:2026-10-12T07:58Z:sergio`).
 
 ## Related
 

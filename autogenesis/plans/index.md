@@ -2,7 +2,7 @@
 
 Scoped under **autogenesis/plans/**.
 
-- [Harden the catalogue description so an agreed skill-package change activates Autogenesis](2026-10-12-catalogue-description-hardening.md) — **designed**; awaiting approval
+- [Harden the catalogue description so an agreed skill-package change activates Autogenesis](2026-10-12-catalogue-description-hardening.md) — **approved**; unreleased 0.9.0, implementation not started
 - Protostar: [Require a valid plan status key](2026-10-12-plan-status-key.md)
 - Protostar: [Decide whether the discussion gate requires plan status designed](2026-10-12-discussion-gate-designed-only.md)
 - [Harden root routing for discussion conclusions and forbidden plan paths](2026-10-11-root-routing-hardening.md) — **approved**; implemented in unreleased 0.9.0

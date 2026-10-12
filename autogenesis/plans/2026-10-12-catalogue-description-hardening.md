@@ -3,7 +3,11 @@ type: plan
 title: "Harden the catalogue description so an agreed skill-package change activates Autogenesis"
 created: "2026-10-12"
 work_id: "2026-10-12-catalogue-description-hardening"
-status: designed
+status: approved
+approval_ref: "chat:2026-10-12T07:58Z:sergio"
+approved_by: "Sergio Sisternes"
+approved_at: "2026-10-12T07:58:00Z"
+approval_quote: "Approve the catalogue-description hardening design with the recommended answers, in 0.9.0"
 change_class: hardening
 subject: autogenesis
 plan_path: autogenesis/plans/2026-10-12-catalogue-description-hardening.md
@@ -31,7 +35,16 @@ relates_to:
 
 # Harden the catalogue description so an agreed skill-package change activates Autogenesis
 
-**Designed. Not approved. This page is not implementation authority.**
+**Approved for implement in unreleased 0.9.0. This page is the approval record, not the implementation.**
+
+Plan frontmatter `status: approved` records explicit owner approval (Sergio Sisternes, 2026-10-12 08:58 BST, `chat:2026-10-12T07:58Z:sergio`). The canonical work node uses the same status and `approval_ref`. Implement may proceed within the pins below and the approval answers. It must not bump the version.
+
+## Approval answers (2026-10-12)
+
+1. Ship in `0.9.0`. It is unreleased, so no version bump (open question 4).
+2. The new trigger task `agreed-change-activates-autogenesis` also grades plan status with the existing `proposed` or `designed` check (open question 2). This does not edit `discussion-has-no-implement-authority` and does not decide F2.
+3. F1 (plan status key) and F2 (discussion gate requires `designed`) stay parked as separate future designs. Not implemented now (open question 1).
+4. The `SKILL.md` token budget is 4500, as already set in `.waza.yaml` on the implement base (`harden-root-routing-0-9-0`, 3a92322). `.waza.yaml` is still not edited. Implement also corrects the one stale budget mention in `references/waza-authoring.md` from 4000 to 4500 (open question 3). `apm.yml` stays unchanged.
 
 `change_class: hardening`
 
@@ -472,7 +485,7 @@ Whether `discussion-has-no-implement-authority` should accept only plan status `
 ## Acceptance
 
 - The proposal above is the only description text. It is 887 characters, imperative, and keeps the retained phrases.
-- Plan frontmatter `status` is `designed`. Work node `status` is `designed`.
+- Plan frontmatter `status` is `approved`. Work node `status` is `approved` (was `designed` at design time).
 - High-severity counters are pinned. C-fold is rejected with a reason. C1–C5 hold: a non-trivial counter, high-severity pins, visible pins, scope intact, no implementation in this operation, change-class stated, Genesis Artifacts present for hardening.
 - No product file is edited in this Run.
 - Explicit approval is required before implement.
